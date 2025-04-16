@@ -1,0 +1,99 @@
+.health-way {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.health-way__text {
+    margin-bottom: 22px;
+}
+
+.health-way__list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.health-way__list-item p {
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #F7F5F1;
+    color: #7B9E87;
+    font-family: 'Gotham', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.health-way__list-item img {
+    height: 312px;
+    width: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.health-way .swiper-pagination {
+    position: static;
+    margin-top: 24px;
+}
+
+.health-way .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    background-color: #F7F5F1;
+    opacity: 1;
+    transition-duration: .25s;
+}
+
+.health-way .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #221F1F;
+}
+
+@media (min-width: 768px) {
+    .health-way__list-item:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 1024px) {
+    .health-way {
+        padding-top: 180px;
+        padding-bottom: 180px;
+    }
+
+    .health-way h2 {
+        max-width: 700px;
+    }
+
+    .health-way__text {
+        max-width: 880px;
+        margin-bottom: 64px;
+    }
+
+    .health-way__list .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+
+    .health-way__list-item p {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        font-size: 18px;
+    }
+
+    .health-way__list-item img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .health-way__list-item p {
+        font-size: 20px;
+    }
+}

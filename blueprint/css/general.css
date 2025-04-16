@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,500;1,62.5..100,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+    font-family: 'Gotham-normal';
+    src: url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
+    src: url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Book.eot') format('embedded-opentype'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Book.woff2') format('woff2'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Book.woff') format('woff'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham-bold';
+    src: url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Bold.eot') format('embedded-opentype'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Bold.woff2') format('woff2'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Bold.woff') format('woff'),
+    url('https://valhallavitality.com/wp-content/themes/salient/fonts/Gotham-Bold.ttf') format('truetype');
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .h2, .h3, .h4 {
+    font-family: 'Gotham', sans-serif;
+    line-height: normal;
+}
+
+h1, h2, h3, ul, ol, p {
+    margin: 0;
+    padding: 0;
+}
+
+img, video {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgb(34 31 31)
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 18px 32px;
+    justify-content: center;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: -0.36px;
+    border-radius: 30px;
+    transition-duration: .25s;
+}
+
+.btn-primary {
+    background-color: rgb(45 45 45);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: rgb(59 59 59);
+}
+
+.btn-secondary {
+    background-color: rgb(249 163 81);
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 15%) inset;
+    color: rgb(1 1 1);
+}
+
+.btn-secondary:hover {
+    background-color:rgb(255 151 53);
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 52px;
+    text-transform: capitalize;
+}
+
+h2, .h2 {
+    margin-bottom: 14px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+h3, .h3 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    h2, .h2 {
+        margin-bottom: 20px;
+        font-size: 52px;
+    }
+
+    .btn-primary {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-pagination {
+        display: none;
+    }
+}

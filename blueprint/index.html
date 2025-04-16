@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blueprint</title>
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/health-way.css" />
+    <link rel="stylesheet" href="css/how-it-works.css" />
+    <link rel="stylesheet" href="css/ai-assistant.css" />
+    <link rel="stylesheet" href="css/focus-plans.css" />
+    <link rel="stylesheet" href="css/health-goals.css" />
+    <link rel="stylesheet" href="css/ai-benefits.css" />
+    <link rel="stylesheet" href="css/reviews.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <img class="hero__img" src="img/hero/hero-img.webp" alt="Wellness Blueprint">
+                <div class="hero__text-wrapper">
+                    <p class="h2">Your Personalized</p>
+                    <h1>Wellness Blueprint</h1>
+                    <p>A personalized health plan for your goals. Free to start. Backed by experts.</p>
+                    <div class="hero__buttons-wrapper">
+                        <a href="#" class="btn btn-secondary">Start My Personalized Plan</a>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="health-way">
+        <div class="container">
+            <div class="health-way__text">
+                <h2 data-aos="fade-right">A Smarter Way to Take Control of Your Health</h2>
+                <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">Valhalla Vitality proudly introduces the AI Suite — an advanced, provider-led platform designed to elevate patient care. With intuitive design, smart automation, and deep data insights, we're building the next generation of wellness tools — all with the provider and patient in mind.</p>
+            </div>
+            <div class="health-way__list swiper">
+                <div class="swiper-wrapper">
+                    <div data-aos="zoom-in" class="health-way__list-item swiper-slide">
+                        <p>Streamlined patient intake & charting</p>
+                        <img width="312" height="312" src="img/health-way/image-31.webp" alt="Streamlined patient intake & charting">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="300" class="health-way__list-item swiper-slide">
+                        <p>Personalized plans in seconds</p>
+                        <img width="312" height="312" src="img/health-way/image-34.webp" alt="Personalized plans in seconds">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="600" class="health-way__list-item swiper-slide">
+                        <p>Improved accuracy & faster decision-making</p>
+                        <img width="312" height="312" src="img/health-way/image-32.webp" alt="Improved accuracy & faster decision-making">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="900" class="health-way__list-item swiper-slide">
+                        <p>Fully integrated provider workflows</p>
+                        <img width="312" height="312" src="img/health-way/image-33.webp" alt="Fully integrated provider workflows">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <script>
+            let slider = null;
+            function initSwiper() {
+                if (window.innerWidth < 1024) {
+                    if (!slider) {
+                        slider = new Swiper('.health-way__list', {
+                            slidesPerView: 1,
+                            spaceBetween: 32,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                            },
+                        });
+                    }
+                } else {
+                    if (slider) {
+                        slider.destroy(true, true);
+                        slider = null;
+                    }
+                }
+            }
+            window.addEventListener('DOMContentLoaded', initSwiper);
+            window.addEventListener('resize', initSwiper);
+        </script>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="how-it-works__inner">
+                <div class="how-it-works__img"><img data-aos="zoom-in-up" data-aos-offset="200" src="img/how-it-works/how-it-works.webp" alt="How it works"></div>
+                <div class="how-it-works__text">
+                    <h2>How it works</h2>
+                    <p class="h3">3 Easy Steps</p>
+                    <ol class="how-it-works__list">
+                        <li data-aos="fade-left" class="active">
+                            <h3>Take the Wellness Assessment</h3>
+                            <p>Answer a few quick questions about your lifestyle, health goals, and habits.</p>
+                        </li>
+                        <li data-aos="fade-left" data-aos-delay="300">
+                            <h3>Receive Your Vitality Wellness Blueprint</h3>
+                            <p>Thoryn instantly generates a personalized plan — including nutrition, movement, sleep, and supplement recommendations.</p>
+                        </li>
+                        <li data-aos="fade-left" data-aos-delay="600">
+                            <h3>Explore Deeper Wellness Support</h3>
+                            <p>Unlock additional platform features and gain access to provider guidance when you're ready — empowering you to go beyond your Blueprint at your own pace.</p>
+                        </li>
+                    </ol>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn btn-primary">Get Access</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const items = document.querySelectorAll('.how-it-works__list li');
+                    let currentIndex = 0;
+                    function toggleActive() {
+                        items.forEach(item => item.classList.remove('active'));
+                        items[currentIndex].classList.add('active');
+                        currentIndex = (currentIndex + 1) % items.length;
+                    }
+                    setInterval(toggleActive, 2000);
+                });
+            </script>
+    </section>
+
+    <section class="ai-assistant">
+        <div class="container">
+            <div class="ai-assistant__inner">
+                <div class="ai-assistant__img">
+                    <img
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-offset="300"
+                        src="img/ai-assistant/phone.webp"
+                        alt="Your AI Wellness Assistant"
+                    >
+                </div>
+                <div class="ai-assistant__text">
+                    <h2>Meet Thoryn: Your AI Wellness Assistant</h2>
+                    <p class="h3">Smarter Support. Personalized Results.</p>
+                    <p>Meet Thoryn — your intelligent digital health strategist. Built on cutting-edge AI and medical insight, Thoryn personalizes wellness support for real-life goals.</p>
+                    <ul>
+                        <li>Real-time plan generation</li>
+                        <li>Evidence-based guidance</li>
+                        <li>Provider-friendly integration</li>
+                    </ul>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn btn-primary">See a Sample Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="focus-plans">
+        <div class="container">
+            <div class="focus-plans__inner">
+                <div class="focus-plans__title-wrapper">
+                    <span class="badge">Coming soon</span>
+                    <h2>Targeted Focus Plans</h2>
+                </div>
+                <p>We’re expanding the Blueprint experience with <strong>Targeted Focus Plans</strong> — tailored support for stress, metabolism, sleep, hormonal health, and more. These plans will be auto-generated based on your intake and integrated into your Blueprint.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="health-goals">
+        <div class="container">
+            <div class="health-goals__text">
+                <h2>Take the First Step Toward Your Health Goals</h2>
+                <p>Free to start. No subscriptions. Just real progress.</p>
+            </div>
+            <div class="health-goals__tabs">
+                <div class="health-goals__tabs-text">
+                    <div class="health-goals__tabs-nav">
+                        <button type="button" data-tab="men" class="tab-btn active">Men</button>
+                        <button type="button" data-tab="women" class="tab-btn">Women</button>
+                        <button type="button" data-tab="general" class="tab-btn">General</button>
+                    </div>
+                    <div data-tab="men" class="tab-content active">
+                        <div class="health-goals__tab-text-item">
+                            <h3>Testosterone</h3>
+                            <p>Natural approaches to optimize hormonal health and vitality.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Performance</h3>
+                            <p>Targeted strategies for physical and mental performance enhancement.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Metabolic Health</h3>
+                            <p>Personalized plans for improving energy, weight management and metabolic markers.</p>
+                        </div>
+                    </div>
+                    <div data-tab="women" class="tab-content">
+                        <div class="health-goals__tab-text-item">
+                            <h3>PCOS</h3>
+                            <p>Personalized nutrition and lifestyle supports to help manage PCOS symptoms.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Fatigue</h3>
+                            <p>Targeted energy-boosting strategies for women dealing with chronic fatigue.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Menopause</h3>
+                            <p>Customized plans to navigate hormonal shifts with nutrition and movement.</p>
+                        </div>
+                    </div>
+                    <div data-tab="general" class="tab-content">
+                        <div class="health-goals__tab-text-item">
+                            <h3>Energy & Mood</h3>
+                            <p>Strategies to boost energy levels naturally and support emotional wellbeing.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Sleep Quality</h3>
+                            <p>Personalized sleep optimization plans based on your unique patterns.</p>
+                        </div>
+                        <div class="health-goals__tab-text-item">
+                            <h3>Sustainable Wellness</h3>
+                            <p>Balanced approaches for long-term health that fit into your lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="health-goals__tabs-img">
+                    <p class="description">"If you've ever felt stuck, this is your next step."</p>
+                    <img data-tab="men" src="img/health-goals/men.webp" alt="Men" class="tab-content active">
+                    <img data-tab="women" src="img/health-goals/women.webp" alt="Women" class="tab-content">
+                    <img data-tab="general" src="img/health-goals/general.webp" alt="General" class="tab-content">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function openTab(tabName, buttonElement) {
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-content[data-tab="' + tabName + '"]').forEach(content => {
+                    content.classList.add('active');
+                });
+                buttonElement.classList.add('active');
+
+            }
+
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    openTab(tabName, this);
+                });
+            });
+
+            if (tabButtons.length > 0) {
+                tabButtons[0].click();
+            }
+        </script>
+    </section>
+
+    <section class="ai-benefits">
+        <div class="container">
+            <p class="h4">AI Suite Features</p>
+            <h2>Benefits of Using the <span>AI Suite</span></h2>
+            <div class="ai-benefits__list swiper">
+                <ul class="swiper-wrapper">
+                    <li data-aos="zoom-in" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/recomendations.svg" alt="Personalized & structured recommendations"></div>
+                        <p>Personalized & structured recommendations</p>
+                    </li>
+                    <li data-aos="zoom-in" data-aos-delay="300" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/welness-insights.svg" alt="AI-enhanced wellness insights"></div>
+                        <p>AI-enhanced wellness <br> insights</p>
+                    </li>
+                    <li data-aos="zoom-in" data-aos-delay="600" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/progress.svg" alt="Progress you can track"></div>
+                        <p>Progress <br> you can track</p>
+                    </li>
+                    <li data-aos="zoom-in" data-aos-delay="800" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/clock.svg" alt="No waiting, no guesswork"></div>
+                        <p>No waiting, <br> no guesswork</p>
+                    </li>
+                    <li data-aos="zoom-in" data-aos-delay="1100" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/hands.svg" alt="Built for provider collaboration"></div>
+                        <p>Built for provider <br> collaboration</p>
+                    </li>
+                    <li data-aos="zoom-in" data-aos-delay="1400" class="ai-benefits__list-item swiper-slide">
+                        <div class="icon"><img src="img/ai-benefits/digital.svg" alt="100% digital & accessible"></div>
+                        <p>100% <br> digital & accessible</p>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <script>
+            let sliderBenefits = null;
+            function initSwiper() {
+                if (window.innerWidth < 1024) {
+                    if (!sliderBenefits) {
+                        sliderBenefits = new Swiper('.ai-benefits__list', {
+                            slidesPerView: 1,
+                            spaceBetween: 32,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                            },
+                        });
+                    }
+                } else {
+                    if (sliderBenefits) {
+                        sliderBenefits.destroy(true, true);
+                        sliderBenefits = null;
+                    }
+                }
+            }
+            window.addEventListener('DOMContentLoaded', initSwiper);
+            window.addEventListener('resize', initSwiper);
+        </script>
+    </section>
+
+    <section class="reviews">
+        <div class="container">
+            <h3>Wellness on Your Terms:</h3>
+            <div class="reviews-list">
+                <div class="item">
+                    <p class="review-text">“I finally feel like I’m in control of my health again.”</p>
+                    <div class="img"><img src="img/ai-benefits/lauren.webp" alt="Lauren D."></div>
+                    <p class="reviewer">Lauren D., age 38</p>
+                </div>
+                <div class="item">
+                    <p class="review-text">"Cooking with a Personal AI assistant makes cooking dinner easier !" </p>
+                    <div class="img"><img src="img/ai-benefits/james.webp" alt="James K."></div>
+                    <p class="reviewer">James K., age 45
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="review-text">"My health is finally in my hands, and it feels amazing."</p>
+                    <div class="img"><img src="img/ai-benefits/jessica.webp" alt="Jessica M."></div>
+                    <p class="reviewer">Jessica M., age 31</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-outer">
+            <div class="container">
+                <div class="cta-inner">
+                    <div data-aos="fade-up" data-aos-offset="200" class="cta__img"><img src="img/cta/cta.webp" alt="Health Goals"></div>
+                    <div class="cta__text">
+                    <video autoplay muted loop class="cta__video">
+                        <source src="video/cta-video.mp4" type="video/mp4" />
+                    </video>
+                    <h2>Take the First Step Toward Your Health Goals</h2>
+                    <p>Free to start. No subscriptions. Just real progress.</p>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn btn-primary">Start My Plan with Thoryn</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true,
+    });
+</script>
+</html>

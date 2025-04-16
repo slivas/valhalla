@@ -1,0 +1,69 @@
+.hero {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    background-image: url("../img/hero/hero-bg.webp");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #F7F5F1;
+}
+
+.hero__buttons-wrapper {
+    display: flex;
+    margin-top: 64.53vw;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero__img {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        background-image: url("../img/hero/hero-bg-desktop.webp");
+        background-position: right;
+    }
+
+    .hero__buttons-wrapper {
+        margin-top: 100px;
+    }
+
+    .hero__buttons-wrapper {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 736px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero__buttons-wrapper {
+        margin-top: 64px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero {
+        padding-top: 150px;
+    }
+
+    .hero__img {
+        display: block;
+    }
+
+    .hero__inner {
+        display: grid;
+        grid-template-columns: 418px 1fr;
+        grid-column-gap: 96px;
+        align-items: center;
+    }
+}
