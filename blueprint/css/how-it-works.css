@@ -87,16 +87,36 @@
 
     .how-it-works__img {
         max-width: 100%;
+        animation: rotation 4s linear infinite;
     }
 
     .how-it-works .btn-wrapper {
         align-items: flex-start;
     }
+
+    .how-it-works__list {
+        max-width: 550px;
+    }
 }
 
 @media (min-width: 1280px) {
     .how-it-works__inner {
-        grid-template-columns: 614px 1fr;
-        grid-column-gap: 50px;
+        grid-template-columns: 530px 1fr;
+        grid-column-gap: 120px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+    40% {
+        transform: rotate(-12deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }

@@ -14,6 +14,7 @@
 }
 
 .cta__video {
+    position: relative;
     width: 100px;
     height: 100px;
     margin: -50px auto 32px;
