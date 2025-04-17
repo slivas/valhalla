@@ -63,6 +63,10 @@
     flex-direction: column;
 }
 
+.how-it-works__img {
+    animation: rotation 4s linear infinite;
+}
+
 @media (min-width: 768px) {
     .how-it-works__img {
         max-width: 574px;
@@ -87,7 +91,6 @@
 
     .how-it-works__img {
         max-width: 100%;
-        animation: rotation 4s linear infinite;
     }
 
     .how-it-works .btn-wrapper {
