@@ -100,13 +100,13 @@ button {
 }
 
 h1 {
-    margin-bottom: 24px;
+    margin-bottom: 4px;
     font-size: 52px;
     text-transform: capitalize;
 }
 
 h2, .h2 {
-    margin-bottom: 14px;
+    margin-bottom: 4px;
     font-size: 32px;
     font-weight: 700;
     text-transform: capitalize;
@@ -125,6 +125,10 @@ h3, .h3 {
 }
 
 @media (min-width: 768px) {
+    h1 {
+        margin-bottom: 18px;
+    }
+
     h2, .h2 {
         margin-bottom: 20px;
         font-size: 52px;

@@ -46,8 +46,9 @@
     }
 
     .focus-plans__inner {
+        position: relative;
+        left: calc(50% - 32px);
         max-width: 55%;
-        margin-left: auto;
     }
 }
 
