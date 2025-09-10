@@ -185,6 +185,7 @@
 
     .glp-need-help_btn-wrapper {
         grid-template-columns: 74px 190px 1fr;
+        padding-right: 32px;
     }
 
     .glp-need-help_text {

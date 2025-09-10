@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     slider.addEventListener('mouseenter', () => {
-        paused = true;
+        paused = false;
     });
 
     slider.addEventListener('mouseleave', () => {

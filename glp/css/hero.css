@@ -20,7 +20,7 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #5D96B3;
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: min(11vw, 56px);
 }
 
 .glp-hero_buttons {
