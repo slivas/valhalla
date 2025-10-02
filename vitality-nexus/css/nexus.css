@@ -40,6 +40,7 @@
 
 .nexus__list-text-inner {
     display: flex;
+    width: 100%;
     flex-direction: column;
     row-gap: 12px;
 }
