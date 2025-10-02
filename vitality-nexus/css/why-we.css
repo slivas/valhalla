@@ -1,0 +1,117 @@
+.section__why-we {
+    margin-top: 120px;
+}
+
+.why-we__wrapper {
+    padding: 32px 20px;
+    text-align: center;
+    background-color: #F7F5F1;
+    border-radius: 24px;
+}
+
+.section__why-we h2 {
+    display: grid;
+}
+
+.section__why-we .section-description {
+    color: #221F1F;
+}
+
+.why-we__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.why-we__list-item {
+    display: flex;
+    width: 274px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10);
+}
+
+.why-we__list-item-img {
+    width: 64px;
+}
+
+.why-we__list-item h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .why-we__wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section__why-we h2 {
+        display: block;
+    }
+
+    .why-we__list {
+        flex-direction: row;
+        align-items: normal;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section__why-we {
+        margin-top: 200px;
+    }
+
+    .why-we__list {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 1280px) {
+    .why-we__list-item {
+        height: 254px;
+        padding-top: 40px;
+        padding-bottom: 36px;
+        row-gap: 32px;
+        overflow: hidden;
+        transition-duration: .25s;
+        transition-property: padding-top, row-gap;
+    }
+
+    .why-we__list-item-img {
+        width: auto;
+        height: 94px;
+        transition-duration: .25s;
+        transition-property: height;
+    }
+
+    .why-we__list-item h3 {
+        max-width: 164px;
+    }
+
+    .why-we__list-item p {
+        opacity: 0;
+        transition-duration: .25s;
+    }
+
+    .why-we__list-item:hover {
+        padding-top: 32px;
+        row-gap: 8px;
+    }
+
+    .why-we__list-item:hover .why-we__list-item-img {
+        height: 54px;
+    }
+
+    .why-we__list-item:hover p {
+        opacity: 1;
+        transition-delay: 0.1s;
+    }
+}

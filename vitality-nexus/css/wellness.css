@@ -1,0 +1,81 @@
+.section__wellness h2 {
+    display: grid;
+    text-align: center;
+}
+
+.section__wellness .section-description {
+    text-align: center;
+}
+
+.section__wellness .wellness-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px;
+    background-color: #F7F5F1;
+}
+
+@media (max-width: 767px) {
+    .section__wellness .wellness-list {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+}
+
+.wellness-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    color: #8B8E99;
+    font-size: 18px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(29, 36, 82, 0.10), 0 1px 2px 0 rgba(29, 36, 82, 0.06);
+}
+
+.wellness-list-item h3 {
+    margin-bottom: 24px;
+    color: #221F1F;
+}
+
+
+.wellness-list-item .btn {
+    margin-top: 34px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+@media (min-width: 768px) {
+    .section__wellness .wellness-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 40px;
+        gap: 24px;
+        border-radius: 24px;
+    }
+
+    .wellness-list-item {
+        flex-grow: 1;
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .section__wellness h2 {
+        display: block;
+    }
+
+    .section__wellness .section-description {
+        max-width: 968px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 64px;
+    }
+
+    .wellness-list-item {
+        flex-basis: calc(33% - 20px);
+    }
+}
