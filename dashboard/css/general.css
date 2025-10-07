@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Gotham';
+    font-weight: normal;
+    src: url('../../fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/Gotham-Book.eot') format('embedded-opentype'),
+    url('../../fonts/Gotham-Book.woff2') format('woff2'),
+    url('../../fonts/Gotham-Book.woff') format('woff'),
+    url('../../fonts/Gotham-Book.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gotham';
+    font-weight: 700;
+    src: url('../../fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../../fonts/Gotham-Bold.eot') format('embedded-opentype'),
+    url('../../fonts/Gotham-Bold.woff2') format('woff2'),
+    url('../../fonts/Gotham-Bold.woff') format('woff'),
+    url('../../fonts/Gotham-Bold.ttf') format('truetype');
+}
+
+
+body {
+    margin: 0;
+    background-color: #F7F5F1;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+    color: #221F1F;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1460px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 12px 20px;
+    justify-content: center;
+    border-radius: 100px;
+    line-height: 140%;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #fff;
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 15%);
+    border-width: 1px;
+    border-style: solid;
+    transition-duration: .25s;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.btn-orange {
+    background-color: #F9A351;
+    border-color: #F9A351;
+}
+
+.btn-orange:hover {
+    background-color: #221F1F;
+    color: #fff;
+    border-color: #221F1F;
+}
+
+.btn-green-inverse {
+    border: 1px solid #7B9E87;
+    background-color: transparent;
+    color: #221F1F;
+}
+
+.btn-green-inverse:hover {
+    background-color: #7B9E87;
+    color: #fff;
+}
+
+h2, h3 {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: normal;}
+
+h2 {
+    margin-bottom: 4px;
+    font-size: 24px;
+    color: #4A9BC4;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+@media (min-width: 1024px) {
+    h2 {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}

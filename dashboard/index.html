@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+<main class="dashboard">
+    <div class="main-container">
+        <div class="tabs-nav">
+            <button type="button" data-tab="dashboard" class="tab-btn active">
+                <span class="tab-btn__icon-wrapper">
+                    <svg viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M49.797 5.5H9.20302C8.48638 5.50081 7.79933 5.78585 7.29259 6.29259C6.78585 6.79933 6.50081 7.48638 6.5 8.20302V48.7969C6.50079 49.5135 6.78582 50.2006 7.29256 50.7074C7.7993 51.2141 8.48637 51.4992 9.20302 51.5H49.797C50.5136 51.4992 51.2007 51.2141 51.7074 50.7074C52.2142 50.2006 52.4992 49.5135 52.5 48.7969V8.20302C52.4992 7.48638 52.2141 6.79933 51.7074 6.29259C51.2007 5.78585 50.5136 5.50081 49.797 5.5ZM9.20302 6.85029H49.797C50.1556 6.8507 50.4995 6.99335 50.7531 7.24694C51.0067 7.50054 51.1493 7.84438 51.1497 8.20302V13.84H7.85029V8.20302C7.8507 7.84438 7.99335 7.50054 8.24694 7.24694C8.50054 6.99335 8.84438 6.8507 9.20302 6.85029ZM49.797 50.1497H9.20302C8.84437 50.1493 8.50053 50.0066 8.24694 49.753C7.99334 49.4994 7.8507 49.1555 7.85029 48.7969V15.1902H51.1497V48.7969C51.1493 49.1555 51.0067 49.4994 50.7531 49.753C50.4995 50.0066 50.1556 50.1493 49.797 50.1497ZM30.5172 36.1571H25.4276C25.2485 36.1571 25.0768 36.2282 24.9502 36.3548C24.8236 36.4814 24.7525 36.6532 24.7525 36.8322V46.1132C24.7525 46.2923 24.8236 46.464 24.9502 46.5906C25.0768 46.7172 25.2485 46.7884 25.4276 46.7884H30.5172C30.6963 46.7884 30.868 46.7172 30.9946 46.5906C31.1212 46.464 31.1924 46.2923 31.1924 46.1132V36.8322C31.1924 36.6532 31.1212 36.4814 30.9946 36.3548C30.868 36.2282 30.6963 36.1571 30.5172 36.1571ZM29.8421 45.4381H26.1028V37.5074H29.8421V45.4381ZM38.4258 30.0697H33.3363C33.1572 30.0697 32.9855 30.1408 32.8589 30.2674C32.7323 30.394 32.6611 30.5658 32.6611 30.7448V46.1131C32.6611 46.2922 32.7323 46.4639 32.8589 46.5905C32.9855 46.7172 33.1572 46.7883 33.3363 46.7883H38.4257C38.6048 46.7883 38.7765 46.7172 38.9031 46.5905C39.0297 46.4639 39.1009 46.2922 39.1009 46.1131V30.7447C39.1009 30.5657 39.0297 30.3939 38.9031 30.2673C38.7765 30.1407 38.6048 30.0696 38.4257 30.0696L38.4258 30.0697ZM37.7507 45.4381H34.0114V31.4199H37.7506L37.7507 45.4381ZM46.3346 24.2816H41.245C41.066 24.2816 40.8942 24.3527 40.7676 24.4793C40.641 24.606 40.5699 24.7777 40.5699 24.9567V46.1131C40.5699 46.2922 40.641 46.4639 40.7676 46.5905C40.8942 46.7172 41.066 46.7883 41.245 46.7883H46.3345C46.5135 46.7883 46.6853 46.7172 46.8119 46.5905C46.9385 46.4639 47.0096 46.2922 47.0096 46.1131V24.9566C47.0096 24.7776 46.9385 24.6059 46.8119 24.4792C46.6853 24.3526 46.5135 24.2815 46.3345 24.2815L46.3346 24.2816ZM45.6594 45.4381H41.9202V25.6318H45.6593L45.6594 45.4381ZM11.0347 38.4154H18.6954V39.7657H11.0347V38.4154ZM11.0347 41.9267H18.6954V43.277H11.0347V41.9267ZM11.0347 45.438H18.6954V46.7883H11.0347V45.438ZM17.6298 17.8948C16.2485 17.8948 14.8983 18.3044 13.7498 19.0718C12.6013 19.8392 11.7061 20.9299 11.1775 22.206C10.6489 23.4822 10.5106 24.8864 10.78 26.2412C11.0495 27.5959 11.7147 28.8403 12.6914 29.8171C13.6681 30.7938 14.9125 31.4589 16.2673 31.7284C17.622 31.9979 19.0263 31.8596 20.3024 31.331C21.5786 30.8024 22.6693 29.9072 23.4367 28.7587C24.2041 27.6102 24.6137 26.2599 24.6136 24.8786C24.6116 23.027 23.8751 21.2519 22.5658 19.9426C21.2566 18.6334 19.4814 17.8969 17.6298 17.8948ZM23.2214 24.2035H18.305V19.2869C19.5558 19.4398 20.7194 20.007 21.6104 20.898C22.5014 21.7891 23.0685 22.9527 23.2214 24.2035ZM16.9547 19.2869V24.5904L13.1254 28.2577C12.5315 27.4672 12.1562 26.5342 12.0374 25.5525C11.9186 24.5709 12.0604 23.5753 12.4486 22.6659C12.8368 21.7566 13.4577 20.9655 14.2488 20.3723C15.0399 19.7791 15.9733 19.4048 16.9551 19.2869H16.9547ZM17.6298 30.5124C16.3272 30.5135 15.0647 30.0611 14.0593 29.2328L17.901 25.5537H23.2211C23.0546 26.9201 22.3943 28.1785 21.3644 29.0918C20.3346 30.0051 19.0063 30.5103 17.6298 30.5122V30.5124ZM27.2023 10.199C27.2023 10.02 27.2734 9.84824 27.4 9.72162C27.5266 9.59501 27.6983 9.52387 27.8774 9.52387H43.516C43.6951 9.52387 43.8668 9.59501 43.9934 9.72162C44.1201 9.84824 44.1912 10.02 44.1912 10.199C44.1912 10.3781 44.1201 10.5498 43.9934 10.6764C43.8668 10.803 43.6951 10.8742 43.516 10.8742H27.8774C27.6983 10.8742 27.5266 10.803 27.4 10.6764C27.2734 10.5498 27.2023 10.3781 27.2023 10.199Z" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="tab-btn__title">Dashboard</span>
+                <span class="tab-btn__subtitle">Overview</span>
+            </button>
+            <button type="button" data-tab="thoryn" class="tab-btn">
+                <img class="tab-btn__icon" src="img/thoryn.webp" alt="Thoryn">
+                <span class="tab-btn__title">Thoryn</span>
+                <span class="tab-btn__subtitle">AI Wellness Coach</span>
+            </button>
+            <button type="button" data-tab="astrid" class="tab-btn">
+                <img class="tab-btn__icon" src="img/astrid.webp" alt="Astrid">
+                <span class="tab-btn__title">Astrid</span>
+                <span class="tab-btn__subtitle">AI Vitality Ambassador</span>
+            </button>
+            <button type="button" data-tab="medical" class="tab-btn">
+                <span class="tab-btn__icon-wrapper">
+                    <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_7435_1023" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="39" height="39">
+                            <path d="M2.57715 2.65508H40.2673V40.3452H2.57715V2.65508Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_7435_1023)">
+                            <path d="M32.3341 21.6384C32.6115 20.5091 32.7587 19.3286 32.7587 18.1137C32.7587 9.98258 26.1671 3.391 18.0359 3.391C9.90481 3.391 3.31323 9.98258 3.31323 18.1137C3.31323 21.7169 4.60824 25.017 6.75739 27.5759L5.61785 31.8285L10.2242 30.5942C12.4884 32.0145 15.166 32.8364 18.0359 32.8364C19.2539 32.8364 20.4372 32.6885 21.5691 32.4098" stroke="currentColor" stroke-width="1.47227" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.4771 21.5C35.4777 21.5 39.5315 25.5538 39.5315 30.5544C39.5315 32.7703 38.7351 34.7999 37.4134 36.3737L38.1141 38.9891L35.2812 38.23C33.8888 39.1033 32.2421 39.6089 30.4771 39.6089C25.4764 39.6089 21.4226 35.5551 21.4226 30.5544C21.4226 25.5538 25.4764 21.5 30.4771 21.5Z" stroke="currentColor" stroke-width="1.47227" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.7355 20.7983L15.3364 15.3992" stroke="currentColor" stroke-width="1.47227" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.4295 23.7056C13.9204 25.1965 16.3377 25.1965 17.8286 23.7056L23.6432 17.8911C25.134 16.4001 25.134 13.9828 23.6432 12.4919C22.1522 11.001 19.7349 11.001 18.244 12.4919L12.4295 18.3064C10.9386 19.7973 10.9386 22.2147 12.4295 23.7056Z" stroke="currentColor" stroke-width="1.47227" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.4767 31.7827V31.4559C30.4767 30.9033 30.7948 30.3897 31.3036 30.1745C32.0662 29.8519 32.6012 29.0969 32.6012 28.2169C32.6012 27.0436 31.65 26.0925 30.4767 26.0925C29.3035 26.0925 28.3523 27.0436 28.3523 28.2169" stroke="currentColor" stroke-width="1.47227" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.7359 20.7983L15.3367 15.3991L12.4295 18.3063C10.9386 19.7973 10.9386 22.2146 12.4295 23.7055C13.9204 25.1965 16.3377 25.1965 17.8286 23.7055L20.7359 20.7983Z" fill="currentColor"/>
+                        </g>
+                    </svg>
+                </span>
+                <span class="tab-btn__title">Medical</span>
+                <span class="tab-btn__subtitle">Questions</span>
+            </button>
+            <button type="button" data-tab="reports" class="tab-btn" disabled>
+                <span class="tab-btn__icon-wrapper">
+                    <svg width="29" height="39" viewBox="0 0 29 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29 2.41781C29 1.36094 28.1265 0.5 27.0482 0.5H1.94578C0.873494 0.5 0 1.36094 0 2.41781V36.5762C0 37.6391 0.873494 38.5 1.94578 38.5H21.9759C22.0542 38.5 22.1325 38.4822 22.1988 38.4525C22.2711 38.4228 22.3313 38.3812 22.3855 38.3278L28.8193 31.9806C28.8735 31.9272 28.9157 31.8619 28.9458 31.7966C28.9759 31.7253 28.994 31.6541 28.994 31.5769V2.41781H29ZM1.16867 36.5762V2.41781C1.16867 1.99625 1.51807 1.65188 1.94578 1.65188H27.0482C27.4819 1.65188 27.8313 1.99625 27.8313 2.41781V31.0009H23.3373C22.2651 31.0009 21.3916 31.8619 21.3916 32.9188V37.3541H1.94578C1.51807 37.3481 1.16867 37.0037 1.16867 36.5762ZM27.006 32.1469L22.5602 36.5288V32.9128C22.5602 32.4913 22.9096 32.1469 23.3373 32.1469H27.006Z" fill="currentColor"/>
+                        <path d="M14.686 9.66163C14.7763 9.87538 14.9872 10.0119 15.2221 10.0119H20.0474C20.3727 10.0119 20.6318 9.75663 20.6318 9.436C20.6318 8.011 20.0715 6.66913 19.0474 5.65975C17.4872 4.12194 15.1619 3.67069 13.1318 4.51975C12.8306 4.64444 12.692 4.98288 12.8185 5.27382L14.686 9.66163ZM18.2221 6.47913C18.8848 7.13225 19.3004 7.9635 19.4269 8.866H15.6137L14.1378 5.3985C15.5836 5.01257 17.1378 5.41038 18.2221 6.47913Z" fill="currentColor"/>
+                        <path d="M9.95146 15.308C11.0057 16.347 12.3912 16.8636 13.7768 16.8636C15.1623 16.8636 16.5478 16.347 17.596 15.308C18.6201 14.3045 19.1804 12.9686 19.1804 11.5377C19.1804 11.217 18.9213 10.9617 18.596 10.9617H14.1623L12.4454 6.93015C12.3189 6.63922 11.9816 6.50265 11.6804 6.6214C11.0418 6.88265 10.4575 7.26859 9.94544 7.76734C7.84303 9.84547 7.84303 13.2298 9.95146 15.308ZM16.7707 14.4945C15.2587 15.9848 12.8792 16.1036 11.2165 14.8686L14.0117 12.1136H17.9695C17.8491 13.0161 17.4334 13.8414 16.7707 14.4945ZM10.7707 8.58078C11.0298 8.3314 11.3069 8.11765 11.6081 7.94547L13.084 11.407L10.3972 14.0552C9.13821 12.4164 9.26472 10.0711 10.7707 8.58078Z" fill="currentColor"/>
+                        <path d="M5.4757 20.5274H23.5239C23.8492 20.5274 24.1082 20.272 24.1082 19.9514C24.1082 19.6308 23.8492 19.3755 23.5239 19.3755H5.4757C5.15039 19.3755 4.89136 19.6308 4.89136 19.9514C4.89136 20.272 5.15039 20.5274 5.4757 20.5274Z" fill="currentColor"/>
+                        <path d="M5.4757 25.3189H23.5239C23.8492 25.3189 24.1082 25.0636 24.1082 24.7429C24.1082 24.4223 23.8492 24.167 23.5239 24.167H5.4757C5.15039 24.167 4.89136 24.4223 4.89136 24.7429C4.89136 25.0636 5.15039 25.3189 5.4757 25.3189Z" fill="currentColor"/>
+                        <path d="M5.4757 30.1045H14.2468C14.5721 30.1045 14.8311 29.8492 14.8311 29.5286C14.8311 29.2079 14.5721 28.9526 14.2468 28.9526H5.4757C5.15039 28.9526 4.89136 29.2079 4.89136 29.5286C4.89136 29.8492 5.15039 30.1045 5.4757 30.1045Z" fill="currentColor"/>
+                        <path d="M16.8974 33.7441H5.4757C5.15039 33.7441 4.89136 33.9995 4.89136 34.3201C4.89136 34.6407 5.15039 34.896 5.4757 34.896H16.8974C17.2227 34.896 17.4817 34.6407 17.4817 34.3201C17.4817 33.9995 17.2227 33.7441 16.8974 33.7441Z" fill="currentColor"/>
+                    </svg>
+                </span>
+                <span class="tab-btn__title">Reports</span>
+                <strong class="badge">Coming soon</strong>
+            </button>
+        </div>
+
+        <div data-tab="dashboard" class="tab-content active">
+            <div class="tab__inner-wrapper">
+                <h2>Recent Activity</h2>
+                <p class="tab-description">Stay up to date with your health and wellness journey</p>
+                <div class="activities">
+                    <div class="activity-item activity-item__green">
+                        <img class="activity-item__img" src="img/heart.webp" alt="Provider">
+                        <h3 class="activity-item__title">Did Your Provider Hit the Mark?</h3>
+                        <p class="activity-item__description">Your recent blood work shows improvement in cholesterol levels. Schedule a follow-up to discuss medication adjustments.</p>
+                        <time>Today at 2:45 PM</time>
+                    </div>
+                    <div class="activity-item activity-item__orange">
+                        <img class="activity-item__img" src="img/calendar.webp" alt="Mindfulness session">
+                        <h3 class="activity-item__title">Completed morning mindfulness session</h3>
+                        <p class="activity-item__description">Great job maintaining your wellness routine! Your stress management goals are on track.</p>
+                        <time>Today at 8:30 AM</time>
+                    </div>
+                    <div class="activity-item activity-item__blue">
+                        <img class="activity-item__img" src="img/astrid.webp" alt="Astrid">
+                        <h3 class="activity-item__title">Astrid provided sleep improvement tips</h3>
+                        <p class="activity-item__description">Based on your recent sleep patterns, I've updated your evening routine with new recommendations.</p>
+                        <time>Yesterday at 9:15 PM</time>
+                    </div>
+                    <div class="activity-item activity-item__yellow">
+                        <img class="activity-item__img" src="img/thoryn.webp" alt="Thoryn">
+                        <h3 class="activity-item__title">Thoryn updated your wellness plan</h3>
+                        <p class="activity-item__description">Your AI coach has adjusted your stress management protocols based on recent health data.</p>
+                        <time>Yesterday at 3:20 PM</time>
+                    </div>
+                </div>
+                <div class="tab__inner-footer">
+                    <p>You have <strong>2 pending</strong> medical questions and <strong>3 new</strong> reports to review</p>
+                    <div class="buttons-wrapper">
+                        <a href="#" class="btn btn-orange">Answer Questions</a>
+                        <a href="#" class="btn btn-green-inverse">View Reports</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-tab="thoryn" class="tab-content">
+            <div class="tab__inner-wrapper">
+                <h2>Meet Thoryn</h2>
+                <p class="tab-description">Your AI Wellness Coach</p>
+                <div class="inner-ai-wrapper">
+                    <div class="tab__inner-item about-ai_wrapper">
+                        <div class="about-ai_img">
+                            <img src="img/thoryn-big.webp" alt="Thoryn">
+                        </div>
+                        <p>I’m Thoryn, your personal AI wellness coach. I can guide you in creating and adjusting your Vitality Wellness Blueprint, track your daily goals, and provide insights on your health journey.</p>
+                    </div>
+                    <div class="tab__inner-item example-questions">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Example Question</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/icons/plan.webp" alt="Wellness plan"></td>
+                                <td>Can you adjust my wellness plan?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/goals.webp" alt="Goals"></td>
+                                <td>What goals should I focus on today?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/sleep.webp" alt="Sleep routine"></td>
+                                <td>How can I improve my sleep routine?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/fit-plan.webp" alt="Fit plan"></td>
+                                <td>What nutrition tips fit my plan?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/progress.webp" alt="Progress"></td>
+                                <td>How do I track my progress over time?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div data-tab="astrid" class="tab-content">
+            <div class="tab__inner-wrapper">
+                <h2>Meet Astrid</h2>
+                <p class="tab-description">Valhalla Vitality AI Ambassador</p>
+                <div class="inner-ai-wrapper">
+                    <div class="tab__inner-item about-ai_wrapper">
+                        <div class="about-ai_img">
+                            <img src="img/astrid-big.webp" alt="Astrid">
+                        </div>
+                        <p>I’m here to guide you through your Valhalla Vitality journey. You can ask me about your account, treatments, or general support.</p>
+                    </div>
+                    <div class="tab__inner-item example-questions">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Example Question</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/icons/plan.webp" alt="Wellness plan"></td>
+                                <td>Can you help me with scheduling?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/fit-plan.webp" alt="Goals"></td>
+                                <td>Where can I find my treatment documents?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/secure.webp" alt="Secure"></td>
+                                <td>Is my personal data secure?</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/icons/fit-plan.webp" alt="Fit plan"></td>
+                                <td>How do I contact support?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+            <div class="notification notification__orange">
+                <p class="notification__title">Astrid`s role</p>
+                <p>I'm here to help with general questions, navigation support, and connecting you with the right resources. For medical questions, please use the Medical Question Bot where your care team can provide direct guidance.</p>
+            </div>
+        </div>
+        <div data-tab="medical" class="tab-content">
+            <div class="notification notification__blue">
+                <p class="notification__title">Astrid`s role</p>
+                <p>I'm here to help with general questions, navigation support, and connecting you with the right resources. For medical questions, please use the Medical Question Bot where your care team can provide direct guidance.</p>
+            </div>
+        </div>
+        <div data-tab="reports" class="tab-content">
+            <div class="notification notification__blue">
+                <div class="text">
+                    <p class="notification__title notification__title-icon">
+                        <img class="icon" src="img/icons/medical-reports-icon.webp" alt="Medical Reports">
+                        Medical Reports Portal
+                    </p>
+                    <p>Secure communication and document sharing with your care team</p>
+                </div>
+                <p class="hipaa-logo">
+                    <img src="img/icons/hipaa-icon.webp" alt="HIPAA logo">
+                    HIPAA Compliant
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

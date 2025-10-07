@@ -86,6 +86,17 @@ body {
     border-color: #5D8169;
 }
 
+.btn-green-inverse {
+    border: 1px solid #7B9E87;
+    background-color: transparent;
+    color: #221F1F;
+}
+
+.btn-green-inverse:hover {
+    background-color: #7B9E87;
+    color: #fff;
+}
+
 .btn-blue-inverse {
     border: 1px solid #6EAFD0;
     background-color: #fff;
