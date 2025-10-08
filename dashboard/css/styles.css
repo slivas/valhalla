@@ -418,7 +418,13 @@
     }
 
     .tab-btn__icon, .tab-btn__icon-wrapper {
-        margin-bottom: 28px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+
+    .tab-btn__icon-wrapper svg {
+        height: 80%;
+        width: auto;
     }
 
     .tab-btn__title {
