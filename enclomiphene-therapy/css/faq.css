@@ -1,0 +1,175 @@
+.section__faq .main-container {
+    display: grid;
+    grid-gap: 42px;
+}
+
+.section__faq h2 {
+    position: relative;
+    display: inline-block;
+    padding-top: 60px;
+    margin-bottom: 14px;
+}
+
+.section__faq h2:before {
+    content: 'Frequently';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid #6EAFD0;
+    background-color: #fff;
+    box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(255, 255, 255, 0.35) inset, -1px 1px 1px 0 rgba(255, 255, 255, 0.35) inset;
+    transform: rotate(-10deg);
+    color: #6EAFD0;
+    text-align: center;
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.faq_title-wrapper {
+    text-align: center;
+    color: #475569;
+}
+
+.section__faq .accordion {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 12px;
+    padding: 20px;
+    background-image: url("../img/faq/fag-bg_mobile.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1023px) {
+    .section__faq .accordion {
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 20px;
+    }
+}
+
+.acc-item {
+    border-radius: 12px;
+    background-color: #F7F5F1;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.10);
+}
+
+.acc-trigger {
+    position: relative;
+    padding: 20px 52px 20px 20px;
+    font-family: 'Gotham', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.is-open .acc-trigger:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.acc-trigger:after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='29' fill='none' viewBox='0 0 28 29'%3E%3Cpath stroke='%23221F1F' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.864' d='m4 9.143 9.546 9.545 9.545-9.545'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    transform: translateY(-50%) rotate(0);
+    transition-duration: .25s;
+}
+
+.acc-panel {
+    height: 0;
+    color: #8B8E99;
+    font-size: 18px;
+    transition-duration: .25s;
+    overflow: hidden;
+}
+
+.acc-panel-inner {
+    padding: 12px 20px 20px;
+}
+
+.section__faq_annotation {
+    padding-top: 12px;
+    text-align: center;
+    color: #434343;
+}
+
+@media (min-width: 1024px) {
+    .section__faq .main-container {
+        grid-template-columns: 270px 1fr;
+    }
+
+    .section__faq .accordion {
+        padding: 32px;
+        border-radius: 24px;
+        background-image: url("../img/faq/fag-bg_desktop.webp");
+    }
+
+    .faq_title-wrapper .sticky-wrapper {
+        position: sticky;
+        top: 130px;
+    }
+
+    .faq_title-wrapper {
+        text-align: left;
+    }
+
+    .section__faq h2:before {
+        left: -14px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .faq_title-wrapper {
+        font-size: 18px;
+    }
+
+    .faq_title-wrapper .sticky-wrapper {
+        top: 230px;
+    }
+
+    .faq_title-wrapper .sticky-wrapper > p {
+        max-width: 350px;
+    }
+
+    .section__faq .main-container {
+        grid-template-columns: 495px 1fr;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section__faq .main-container {
+        grid-column-gap: 105px;
+    }
+
+    .acc-trigger {
+        padding: 32px 114px 32px 42px;
+        font-size: 28px;
+    }
+
+    .acc-trigger:after {
+        right: 35px;
+    }
+
+    .acc-panel-inner {
+        padding-right: 42px;
+        padding-left: 42px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (min-width: 1560px) {
+    .section__faq h2:before {
+        left: -40px;
+    }
+}
