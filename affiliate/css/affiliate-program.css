@@ -1,0 +1,118 @@
+@media (max-width: 1023px) {
+    .affiliate-program__wrapper {
+        position: relative;
+        padding-bottom: 82px;
+    }
+
+    .affiliate-program__wrapper .btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+.affiliate-program__wrapper {
+    display: grid;
+    grid-row-gap: 32px;
+}
+
+.affiliate-program__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+.affiliate-program__img {
+    display: grid;
+    grid-row-gap: 12px;
+}
+
+@media (max-width: 1023px) {
+    .affiliate-program__img img {
+        border-radius: 16px;
+        border: 1px solid #6EAFD0;
+    }
+}
+
+.affiliate-program__img-text {
+    padding: 15px 20px;
+    border-radius: 16px;
+    border: 1px solid #6EAFD0;
+    background-color: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .affiliate-program__img {
+        position: relative;
+    }
+
+    .affiliate-program__img-text {
+        position: absolute;
+        bottom: 28px;
+        left: 50%;
+        width: 486px;
+        padding-right: 72px;
+        padding-left: 72px;
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .affiliate-program__wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+
+    .affiliate-program__text {
+        order: 1;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .affiliate-program__img {
+        border-radius: 16px;
+        border: 1px solid #6EAFD0;
+        overflow: hidden;
+    }
+
+    .affiliate-program__img img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .affiliate-program__img-text {
+        width: 448px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .affiliate-program__wrapper {
+        grid-column-gap: 66px;
+    }
+
+    .affiliate-program__wrapper {
+        grid-template-columns: 665px 1fr;
+    }
+
+    .affiliate-program__wrapper h2 {
+        margin-bottom: 28px;
+    }
+
+    .affiliate-program__wrapper .btn {
+        margin-top: 28px;
+    }
+
+    .affiliate-program__text {
+        font-size: 18px;
+    }
+
+    .affiliate-program__img-text {
+        width: 486px;
+    }
+}

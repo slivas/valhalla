@@ -1,0 +1,93 @@
+.meet-affiliates__section h2 {
+    margin-bottom: 14px;
+}
+
+.meet-affiliates__section-description {
+    margin-bottom: 32px;
+}
+
+.meet-affiliates__list {
+    display: grid;
+    grid-row-gap: 12px;
+}
+
+.meet-affiliates__list-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.meet-affiliates__list-item .video-shell,
+.meet-affiliates__list-item .video-wrapper {
+    position: relative;
+    height: 53.33vw;
+}
+
+.meet-affiliates__list-item video {
+    height: 53.33vw;
+    max-height: 53.33vw;
+    object-position: center 36%;
+}
+
+.meet-affiliates__list-item .video-play {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100%;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.meet-affiliates__list-item .video-play svg {
+    margin-left: 4px;
+}
+
+.meet-affiliates__list-item .video-poster {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meet-affiliates__list-item-description {
+    padding: 12px 20px;
+    font-size: 24px;
+    text-transform: none;
+}
+
+@media (min-width: 768px) {
+    .meet-affiliates__list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8px;
+    }
+
+    .meet-affiliates__list-item .video-shell,
+    .meet-affiliates__list-item .video-wrapper {
+        height: 230px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .meet-affiliates__section-description {
+        margin-bottom: 42px;
+        font-size: 18px;
+    }
+
+    .meet-affiliates__list-item-description {
+        padding: 32px 20px 40px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .meet-affiliates__list {
+        grid-column-gap: 20px;
+    }
+}

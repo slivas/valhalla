@@ -1,0 +1,83 @@
+.community-creator__inner {
+    display: grid;
+    grid-row-gap: 24px;
+    padding: 20px 20px 32px;
+    border-radius: 16px;
+    background-image: url("../img/community/coomunity-creator-bg-mobile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.community-creator__subtitle {
+    font-size: 24px;
+    color: #6EAFD0;
+}
+
+.community-creator__img {
+    height: 72vw;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.community-creator__img img {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.community-creator__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.community-creator__description {
+    margin-top: 12px;
+    text-align: center;
+    color: #8B8E99;
+}
+
+@media (min-width: 768px) {
+    .community-creator__inner {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 16px;
+    }
+
+    .community-creator__img {
+        height: 100%;
+    }
+
+    .community-creator__text {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .community-creator__inner {
+        padding: 42px;
+        grid-column-gap: 32px;
+        box-shadow: 0 1px 3px 0 rgba(29, 36, 82, 0.10), 0 1px 90px 0 rgba(29, 36, 82, 0.06);
+    }
+}
+
+@media (min-width: 1280px) {
+    .community-creator__inner {
+        grid-template-columns: 460px 1fr;
+        grid-column-gap: 64px;
+    }
+
+    .community-creator__subtitle {
+        max-width: 495px;
+    }
+
+    .community-creator__info {
+        max-width: 630px;
+        font-size: 18px;
+    }
+
+    .community-creator__description {
+        margin-top: 24px;
+        color: #221F1F;
+    }
+}

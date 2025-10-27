@@ -1,0 +1,370 @@
+.home__hero {
+    padding-top: 16px;
+}
+
+.home__hero h1 span {
+    font-size: 28px;
+}
+
+.hero__inner {
+    margin-bottom: 34px;
+    border: 1px solid #6EAFD0;
+    background-color: #DCE7EB;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.hero__inner .badge {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.hero__text {
+    display: flex;
+    padding: 24px 12px 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__text h1 {
+    margin-bottom: 24px;
+}
+
+.hero__text .hero__description {
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.hero-slider {
+    position: relative;
+    height: 335px;
+    overflow: hidden;
+}
+
+.hero-slider__viewport {
+    height: 100%;
+    will-change: transform;
+}
+
+.custom-slider__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.custom-slider__image {
+    display: flex;
+    column-gap: 12px;
+}
+
+.custom-slider__image-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.custom-slider__image-col a {
+    display: block;
+    transition-duration: .25s;
+    transition-property: transform;
+}
+
+.custom-slider__image-col a:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1023px) {
+    .hero__services-swiper {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-right: calc(100vw / 2 - 110px);
+        padding-left: calc(100vw / 2 - 110px);
+    }
+}
+
+.hero__services-list-item {
+    width: 220px;
+    height: 222px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.hero__services-list-item .hero__services-list-inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__services-list-item .hero__services-list-inner .title,
+.hero__services-list-item .hero__services-list-inner .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+}
+
+
+.hero__services-list-item .title {
+    font-size: 20px;
+    font-family: 'Gotham-bold', sans-serif;
+    line-height: 1.4;
+    text-align: center;
+    border-radius: 90px;
+    transform: translateX(-50%);
+    transition-duration: .25s;
+}
+
+.hero__services-list-item .btn-secondary {
+    padding-left: 12px;
+    padding-right: 12px;
+	font-size: 16px !important;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    transition-duration: .25s !important;
+	
+}
+
+.hero__services-list-item.telehealth img {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__services-list-item.telehealth .title {
+    padding: 7px 8px;
+    background-color: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.hero__services-list-item.wellness-shop .title,
+.hero__services-list-item.home-labs .title,
+.hero__services-list-item.therapies .title {
+    padding: 10px 29px;
+    background: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(12px);
+    color: #F9A351;
+    white-space: nowrap;
+}
+
+.hero__services-list-item.wellness-shop .hero__services-list-inner:after,
+.hero__services-list-item.nexus .hero__services-list-inner:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background-color: #fff;
+    z-index: -1;
+}
+
+
+.hero__services-list-item.wellness-shop img {
+    position: relative;
+    top: 6px;
+}
+
+.hero__services-list-item.home-labs img {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    max-width: none;
+}
+
+.hero__services-list-item.nexus .nexus-img {
+    position: relative;
+    top: 84px;
+    width: calc(100% - 44px);
+    object-fit: cover;
+    transition-duration: .25s;
+    transform-origin: center;
+}
+
+.hero__services-list-item.nexus .hero__services-list-inner {
+    align-items: center;
+}
+
+.hero__services-list-item.nexus .operators {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    opacity: 0;
+}
+
+.hero__services-list-item.nexus .btn-nexus {
+    display: flex;
+    width: calc(100% - 30px);
+    padding: 8px 20px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    border: 1px solid #6EAFD0;
+    background: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(12px);
+    color: #221F1F;
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+.hero__services-list-item.therapies .hero__services-list-inner:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px rgb(29 36 82 / 10%);
+    z-index: -1;
+    transition-duration: .25s;
+}
+
+.hero__services-list-item.therapies img {
+    object-fit: contain;
+}
+
+.hero__services-list-item.rewards .title {
+    padding: 10px 36px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6EAFD0;
+    background: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(12px);
+    white-space: nowrap;
+}
+
+.hero__services-list-item:not(.rewards) .hero__services-list-inner:hover .title {
+    transform: translate(-50%, -116%);
+}
+
+.hero__services-list-item.telehealth .hero__services-list-inner:hover .title {
+    transform: translate(-50%, -135%);
+}
+
+.hero__services-list-item.rewards .hero__services-list-inner:hover .title {
+    transform: translate(-50%, -300%);
+}
+
+.hero__services-list-item.telehealth .hero__services-list-inner:hover .title,
+.hero__services-list-item.home-labs .hero__services-list-inner:hover .title,
+.hero__services-list-item.rewards .hero__services-list-inner:hover .title{
+    background-color: transparent;
+    backdrop-filter: blur(0);
+}
+
+.hero__services-list-item .hero__services-list-inner:hover .btn-secondary {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s !important;
+
+}
+
+.hero__services-list-item.nexus .hero__services-list-inner:hover .operators {
+    opacity: 1;
+    transition-duration: .25s;
+}
+
+.hero__services-list-item.nexus .hero__services-list-inner:hover .nexus-img {
+    transform: rotate(10deg);
+}
+
+.hero__services-list-item.therapies .hero__services-list-inner:hover:after {
+    top: 0;
+}
+
+.hero__services-list-item.therapies img {
+    transition-duration: .25s;
+}
+
+@media (min-width: 1024px) {
+    .hero__inner {
+        display: grid;
+        grid-template-columns: 1fr 514px;
+        margin-bottom: 64px;
+        align-items: center;
+    }
+
+    .hero__inner .badge {
+        font-size: 18px;
+    }
+
+    .hero__text {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .hero__text h1 {
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 52px;
+    }
+
+    .home__hero h1 span {
+        font-size: 36px;
+    }
+
+    .hero__description {
+        max-width: 470px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .hero-slider {
+        height: 582px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero__inner {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+
+    .hero__text h1 {
+        font-size: 68px;
+    }
+
+    .hero__text h1 span {
+        font-size: 52px;
+        text-transform: capitalize;
+    }
+
+    .hero__text .hero__description {
+        margin-bottom: 42px;
+    }
+
+    .hero__text {
+        padding-left: 0;
+    }
+
+    .custom-slider__image {
+        column-gap: 20px;
+    }
+
+    .custom-slider__image-col {
+        row-gap: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero__inner {
+        padding-left: 90px;
+    }
+
+    .hero__services-list {
+        justify-content: space-between;
+    }
+
+    .home__hero .swiper-pagination {
+        display: none;
+    }
+}

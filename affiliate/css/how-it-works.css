@@ -1,0 +1,202 @@
+.how-it-works_title {
+    text-align: center;
+    color: #475569;
+}
+
+.how-it-works_title h2 {
+    margin-bottom: 14px;
+}
+
+.how-it-works .main-container {
+    display: grid;
+    grid-row-gap: 24px;
+}
+
+.how-it-works_list-title {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #F9A351;
+    font-family: 'Gotham', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: capitalize;
+}
+
+.how-it-works_list {
+    display: grid;
+    margin-bottom: 24px;
+    grid-row-gap: 32px;
+    counter-reset: workListCounter;
+}
+
+.how-it-works_list-item {
+    position: relative;
+    padding-top: 66px;
+}
+
+.how-it-works_list-item:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 98px;
+    height: 98px;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.how-it-works_list-item:nth-child(1):before {
+    background-image: url("../img/how-it-works/1.webp");
+}
+.how-it-works_list-item:nth-child(2):before {
+    background-image: url("../img/how-it-works/2.webp");
+}
+.how-it-works_list-item:nth-child(3):before {
+    background-image: url("../img/how-it-works/3.webp");
+}
+.how-it-works_list-item:nth-child(4):before {
+    background-image: url("../img/how-it-works/4.webp");
+}
+
+.how-it-works_list-item-inner {
+    padding: 40px 16px 16px;
+    border-radius: 24px;
+    background-image: url("../img/how-it-works/how-it-works-bg-mobile.webp");
+    background-size: cover;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+    text-align: center;
+    font-size: 18px;
+}
+
+.how-it-works_list-item-title-wrap {
+    position: relative;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+.how-it-works_list-item-title-wrap:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.how-it-works_list-item-title-wrap .btn {
+    width: 100%;
+}
+
+.how-it-works_list-item-title-wrap .btn {
+    margin-top: 24px;
+}
+
+.how-it-works_list-item-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .how-it-works_list-item {
+        padding-top: 0;
+        padding-left: 52px;
+    }
+
+    .how-it-works_list-item:before{
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .how-it-works_list-item-inner {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        align-items: center;
+        padding: 20px 20px 20px 64px;
+        text-align: left;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .how-it-works_list-item-title-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin-bottom: 0;
+        margin-right: 24px;
+        padding-bottom: 0;
+        padding-right: 24px;
+    }
+
+    .how-it-works_list-item-title-wrap:after {
+        left: auto;
+        right: 0;
+        top: 0;
+        bottom: auto;
+        width: 3px;
+        height: 100%;
+    }
+
+    .how-it-works_list-item-title-wrap .btn {
+        padding-right: 16px;
+        padding-left: 16px;
+        font-size: 16px;
+    }
+
+    .how-it-works_list-item-title h3 {
+        font-size: 28px;
+    }
+
+    .how-it-works_list-item-inner p {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .section.how-it-works {
+        padding-top: 200px;
+    }
+
+    .how-it-works_list-item-inner {
+        height: 140px;
+        background-image: url("../img/how-it-works/how-it-works-bg-desktop.webp");
+    }
+
+    .how-it-works_list-item-title {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .how-it-works .main-container {
+        grid-template-columns: 1fr 870px;
+        grid-column-gap: 100px;
+    }
+    .how-it-works_list-item-inner {
+        grid-template-columns: 340px 1fr;
+    }
+
+    .how-it-works_title {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .sticky-wrapper {
+        position: sticky;
+        top: 230px;
+    }
+
+    .how-it-works_list-title {
+        text-align: left;
+    }
+
+    .how-it-works_list-item-title-wrap .btn {
+        font-size: 18px;
+    }
+}

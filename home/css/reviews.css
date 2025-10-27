@@ -1,0 +1,130 @@
+.reviews__tabs-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4px;
+    margin-bottom: 24px;
+    padding: 4px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+}
+.reviews__tabs-nav .tab-btn {
+    padding: 18px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-width: 0;
+    border-radius: 8px;
+    color: #8B8E99;
+    transition-duration: .25s;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.reviews__tabs-nav .tab-btn.active {
+    background-color: #6EAFD0;
+    color: #fff;
+}
+
+@media (max-width: 1023px) {
+    .reviews__tabs-img {
+        display: none;
+    }
+
+    .reviews__tab-content .review-item:nth-child(n+4) {
+        display: none;
+    }
+}
+
+.section-reviews .review-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #fff;
+    line-height: 1.4;
+}
+
+.section-reviews .review-item time {
+    margin-bottom: 8px;
+    text-align: right;
+    color: #8B8E99;
+    font-family: "Segoe UI", 'Open Sans', sans-serif;
+}
+
+.section-reviews .review-item__name {
+    color: #080D23;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.review-item__rating {
+    margin-bottom: 16px;
+}
+
+.reviews__tab-content .btn {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.reviews__tab-content .review-item-info {
+    padding-bottom: 16px;
+    text-align: center;
+    color: #8B8E99;
+}
+
+@media (min-width: 1024px) {
+    .reviews__tabs {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        grid-column-gap: 16px;
+    }
+
+    .reviews__tab-img {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .reviews__tab-content {
+        height: 460px;
+        padding-right: 16px;
+        overflow-y: auto;
+    }
+
+    .reviews__tab-description{
+        position: absolute;
+        right: 24px;
+        left: 24px;
+        bottom: 24px;
+        padding: 16px;
+        border-radius: 12px;
+        border: 1px solid #4A9BC4;
+        background-color: rgb(255 255 255 / 80%);
+        backdrop-filter: blur(6px);
+        text-align: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .reviews__tabs {
+        grid-template-columns: 1fr 526px;
+        grid-column-gap: 62px;
+    }
+
+    .reviews__tab-content {
+        height: 634px;
+        padding-right: 12px;
+    }
+
+    .section-reviews .review-item {
+        margin-bottom: 12px;
+    }
+    .reviews__tab-content .review-item-info {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 428px;
+    }
+}
+
+
+

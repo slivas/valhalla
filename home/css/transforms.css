@@ -1,0 +1,109 @@
+.section__transforms {
+    margin-top: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 4px;
+    background-color: #F6F6F6;
+    box-shadow: 0 1px 3px 0 rgb(29 36 82 / 10%), 0 1px 90px 0 rgb(29 36 82 / 6%);
+}
+
+.section__transforms-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/transforms/transforms-bg.webp");
+    background-position: center;
+}
+
+.section__transforms h2 {
+    margin-bottom: 0;
+}
+
+.section__transforms .section-description {
+    margin-bottom: 20px;
+}
+
+.transforms__list {
+    display: grid;
+    grid-row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.transforms__list-item {
+    padding: 20px;
+    border-radius: 24px;
+    background-color: #FFF;
+    text-align: center;
+    color: #8B8E99;
+    line-height: 1.4;
+}
+
+.transforms__list-img {
+    margin-bottom: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.transforms__list-item h3 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #221F1F;
+}
+
+.section__transforms .btn-primary {
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (min-width: 768px) {
+    .section__transforms {
+        margin-top: 200px;
+    }
+
+    .section__transforms-inner .section-description {
+        max-width: 80%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .transforms__list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 4px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section__transforms-inner .section-description {
+        max-width: 900px;
+        margin-bottom: 42px;
+    }
+
+    .transforms__list {
+        grid-column-gap: 8px;
+        margin-bottom: 42px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .transforms__list {
+        grid-template-columns: repeat(3, 380px);
+        grid-column-gap: 20px;
+    }
+
+    .section__transforms {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .section__transforms-inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 24px;
+        background-color: #F6F6F6;
+        background-size: cover;
+        box-shadow: 0 1px 3px 0 rgba(29, 36, 82, 0.10), 0 1px 90px 0 rgba(29, 36, 82, 0.06);
+    }
+}
