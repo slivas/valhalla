@@ -368,3 +368,319 @@
         display: none;
     }
 }
+
+.black-friday .hero__inner {
+    background-image: url("../img/hero/black-friday-bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.cyber-monday .hero__inner {
+    background-image: url("../img/hero/cyber-monday-bg.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.black-friday h1 {
+    display: none;
+}
+
+.black-friday .hero__additional-title,
+.cyber-monday .hero__additional-title {
+    margin-bottom: 24px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.black-friday .hero__additional-title {
+    color: #FABA7D;
+    -webkit-text-stroke-color: #F9A351;
+}
+
+.cyber-monday .hero__additional-title {
+    color: #4182A3;
+    -webkit-text-stroke-color: #6EAFD0;
+}
+
+.black-friday .badge-grey {
+    color: #fff;
+    box-shadow: 0 0 12px 0 #FFF;
+}
+
+.black-friday .hero__additional-info,
+.cyber-monday .hero__additional-info {
+    margin-bottom: 32px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'Gotham', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    box-shadow: 0 0 12px 0 #6EAFD0;
+}
+
+.black-friday .hero__additional-info {
+    border-color: #6EAFD0;
+    background-color: #221F1F;
+}
+
+.cyber-monday .hero__additional-info {
+    border-color: #95D8F9;
+    background-color: #F6F6F6;
+    color: #6EAFD0;
+}
+
+.black-friday .hero__additional-info span,
+.cyber-monday .hero__additional-info span {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #6EAFD0;
+}
+
+.hero__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+}
+
+.black-friday .hero__code,
+.cyber-monday .hero__code {
+    cursor: pointer;
+    line-height: 1.5;
+    background-color: rgba(247, 245, 241, 0.10);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.black-friday .hero__code:hover,
+.cyber-monday .hero__code:hover {
+    background-color: rgba(247, 245, 241, 0.15);
+}
+
+.black-friday .hero__description,
+.cyber-monday .hero__description {
+    display: grid;
+    max-width: none;
+    grid-row-gap: 4px;
+}
+
+@media (min-width: 768px) {
+    .black-friday .hero__additional-title,
+    .cyber-monday .hero__additional-title {
+        font-size: 68px;
+    }
+
+    .hero__additional-info {
+        margin-bottom: 42px;
+    }
+}
+
+/*Christmas edition*/
+.christmas-edition .hero__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.christmas-edition .hero__inner::before,
+.christmas-edition .hero__inner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.christmas-edition .hero__inner::before {
+    height: 100%;
+    width: 100%;
+    background-image: url("./wp-content/themes/salient-child/inc/assets/img/home/hero/snow-mobile.webp");
+    background-size: contain;
+}
+
+.christmas-edition .hero__inner::after {
+    height: 160px;
+    width: 105%;
+    background-image: url("/wp-content/themes/salient-child/inc/assets/img/home/hero/hero-christmas-decor-mobile.webp");
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: left 100% top;
+}
+
+@media (max-width: 767px) {
+    .christmas-edition .hero__text h1 {
+        font-size: 24px;
+    }
+}
+
+.christmas-edition .hero__btn-wrapper {
+    align-items: center;
+}
+
+.christmas-edition .hero__additional-info {
+    display: grid;
+    margin-bottom: 12px;
+    padding: 4px 14px;
+    border-radius: 4px;
+    border: 1px solid #95D8F9;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 12px 0 #6EAFD0;
+    font-family: "Gotham", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #6EAFD0;
+    text-align: center;
+}
+
+.christmas-edition .hero__additional-info span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.christmas-edition .hero__btn-wrapper .btn {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.christmas-edition .hero__code {
+    column-gap: 4px;
+    background-color: rgba(247, 245, 241, 0.10);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    color: #221F1F;
+}
+
+.christmas-edition .care-network__list-item {
+    background-image: url("/wp-content/themes/salient-child/inc/assets/img/home/care-network/christmas-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .christmas-edition .hero__inner::after {
+        width: 762px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 1024px) {
+    .christmas-edition .hero__inner::before {
+        background-image: url("/wp-content/themes/salient-child/inc/assets/img/home/hero/snow-desktop.webp");
+        opacity: .45;
+    }
+
+    .christmas-edition .hero__inner::after {
+        left: 0;
+        width: 48%;
+        transform: translateX(0);
+        background-image: url("/wp-content/themes/salient-child/inc/assets/img/home/hero/hero-christmas-decor-desktop.webp");
+    }
+
+    .christmas-edition .hero__additional-info {
+        margin-bottom: 32px;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    .christmas-edition .hero__additional-info span {
+        font-size: 20px;
+    }
+
+    .christmas-edition .hero__btn-wrapper .btn {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .christmas-edition .hero__btn-wrapper .btn.hero__code {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .christmas-edition .hero__description {
+        display: grid;
+        max-width: none;
+    }
+
+    .christmas-edition .section__get-clarity {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .christmas-edition .section__get-clarity::before,
+    .christmas-edition .section__get-clarity::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .christmas-edition .section__get-clarity::before {
+        left: 38%;
+        top: 0;
+        width: 110px;
+        height: 124px;
+        background-image: url("../img/get-clarity/chritmas-decor-small.webp");
+        z-index: 1;
+    }
+
+    .christmas-edition .section__get-clarity::after {
+        right: -46px;
+        width: 228px;
+        height: 196px;
+        background-image: url("../img/get-clarity/chritmas-decor-big.webp");
+        z-index: -1;
+    }
+
+    .christmas-edition .nexus__list-text {
+        transform: translateY(70px);
+        transition-duration: .25s;
+    }
+
+    .christmas-edition .nexus__list-item:hover .nexus__list-text {
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 1280px) {
+    .christmas-edition .section__get-clarity::after {
+        right: -66px;
+        width: 330px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .christmas-edition .hero__inner::after {
+        width: 58%;
+    }
+
+    .christmas-edition .get-clarity__text {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 1690px) {
+    .christmas-edition .section__get-clarity::after {
+        right: -85px;
+        width: 430px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .christmas-edition .section__get-clarity::after {
+        right: -156px;
+        width: 660px;
+        height: 600px;
+    }
+}

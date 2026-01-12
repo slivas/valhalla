@@ -79,3 +79,14 @@
         display: block;
     }
 }
+
+.christmas-edition .section__cta-start {
+    background-image: url("../img/cta-start/bg-christmas.webp");
+}
+
+@media (min-width: 768px) {
+    .christmas-edition .section__cta-start {
+        background-image: url("../img/cta-start/bg-desktop-christmas.webp");
+        background-position: center;
+    }
+}

@@ -3,33 +3,44 @@ document.addEventListener('click', function (e) {
     if (!btn) return;
 
     const block = btn.closest('.meet-affiliates__list-item');
-    const shell = block.querySelector('.video-shell');
-    const src = block.dataset.src;
-    const poster = block.dataset.poster || '';
+    const src = block?.dataset.src;
+    const poster = block?.dataset.poster || '';
 
     if (!src) return;
 
-    const wrapper = document.createElement('div');
-    wrapper.className = 'video-wrapper';
+    const existingModal = document.querySelector('.video-modal');
+    if (existingModal) existingModal.remove();
 
-    const video = document.createElement('video');
-    video.src = src;
-    video.poster = poster;
-    video.controls = true;
-    video.autoplay = true;
-    video.muted = true;
-    video.playsInline = true;
-    video.preload = 'metadata';
-    video.style.width = '100%';
-    video.style.height = '100%';
-    video.style.objectFit = 'cover';
-    video.style.display = 'block';
+    const modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.innerHTML = `
+    <div class="video-modal__overlay"></div>
+    <div class="video-modal__content">
+      <video src="${src}" poster="${poster}" controls autoplay playsinline preload="metadata"></video>
+      <button class="video-modal__close" aria-label="Закрити">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  `;
+    document.body.appendChild(modal);
 
-    wrapper.appendChild(video);
+    const video = modal.querySelector('video');
+    const closeBtn = modal.querySelector('.video-modal__close');
+    const overlay = modal.querySelector('.video-modal__overlay');
 
-    shell.replaceWith(wrapper);
+    setTimeout(() => modal.classList.add('open'), 10);
+
+    function closeModal() {
+        modal.classList.remove('open');
+        video.pause();
+        setTimeout(() => modal.remove(), 300);
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => e.key === 'Escape' && closeModal(), { once: true });
 
     video.muted = false;
-
-    video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
 });

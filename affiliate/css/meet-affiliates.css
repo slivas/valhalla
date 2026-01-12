@@ -63,6 +63,67 @@
     text-transform: none;
 }
 
+.video-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 9999;
+}
+.video-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video-modal__overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.video-modal__content {
+    position: relative;
+    z-index: 1;
+    max-width: 470px;
+    width: 90%;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+}
+
+.video-modal__content video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.video-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.video-modal__close:hover {
+    background: rgba(255,255,255,.3);
+}
+
 @media (min-width: 768px) {
     .meet-affiliates__list {
         grid-template-columns: repeat(3, 1fr);

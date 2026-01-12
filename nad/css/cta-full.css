@@ -1,0 +1,25 @@
+.cta-full {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-image: url("../img/cta-full/cta-full-bg-mobile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cta-full .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    text-align: center;
+}
+
+.cta-full h2 {
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .cta-full {
+        background-image: url("../img/cta-full/cta-full-bg-desktop.webp");
+    }
+}

@@ -1,0 +1,115 @@
+.why-join__section h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.why-join__list {
+    grid-row-gap: 20px;
+}
+
+.why-join__list-item {
+    height: 180px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.10);
+    color: #4B5563;
+    font-family: 'Inter', sans-serif;
+}
+
+.why-join__list-icon {
+    display: none;
+}
+
+.why-join__list-item-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #221F1F;
+    text-transform: uppercase;
+    font-family: 'Gotham', sans-serif;
+}
+
+.why-join__description {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.why-join__description strong {
+    color: #6EAFD0;
+}
+
+@media (min-width: 768px) {
+    .why-join__list {
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .why-join__section h2 {
+        margin-bottom: 42px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .why-join__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 12px;
+    }
+
+    .why-join__list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: text;
+    }
+
+    .why-join__list-item-description {
+        transform: translateY(100%);
+        opacity: 0;
+        height: 0;
+        font-size: 18px;
+    }
+
+    .why-join__list-icon {
+        display: block;
+        width: 96px;
+        height: 96px;
+        margin-bottom: 20px;
+        transition-duration: .125s;
+        transition-property: height;
+    }
+
+    .why-join__list-item:hover .why-join__list-icon {
+        height: 0;
+        margin-bottom: 0;
+    }
+
+    .why-join__list-item:hover .why-join__list-item-description {
+        transform: translateY(0);
+        opacity: 1;
+        height: 100%;
+    }
+
+    .why-join__list-item-title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .why-join__description {
+        margin-top: 42px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .why-join__list {
+        grid-column-gap: 20px;
+    }
+
+    .why-join__list-item-title {
+        font-size: 20px;
+    }
+}
