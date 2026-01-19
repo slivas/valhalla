@@ -1,6 +1,5 @@
 .rewards__text {
     margin-bottom: 32px;
-    text-align: center;
     font-size: 16px;
 }
 
@@ -154,14 +153,15 @@
 }
 
 @media (min-width: 1024px) {
-    .section__rewards .section-description {
-        max-width: 740px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
     .rewards__text {
         margin-bottom: 42px;
+        text-align: center;
+    }
+
+    .section__rewards .section-description {
+        max-width: 764px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .rewards__list {

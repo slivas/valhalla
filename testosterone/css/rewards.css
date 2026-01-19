@@ -1,6 +1,5 @@
 .rewards__text {
     margin-bottom: 32px;
-    text-align: center;
     font-size: 16px;
 }
 
@@ -162,6 +161,7 @@
 
     .rewards__text {
         margin-bottom: 42px;
+        text-align: center;
     }
 
     .rewards__list {

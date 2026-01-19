@@ -38,6 +38,10 @@
     color: #6EAFD0;
 }
 
+.why-swiper {
+    padding: 4px;
+}
+
 @media (min-width: 768px) {
     .why-join__list {
 
@@ -96,6 +100,10 @@
     .why-join__list-item-title {
         font-size: 18px;
         text-align: center;
+    }
+
+    .why-join__list-item:hover .why-join__list-item-title {
+        text-align: left;
     }
 
     .why-join__description {

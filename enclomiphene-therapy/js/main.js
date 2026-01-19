@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let direction = -1;
     let position = 0;
-    const speed = 0.75;
+    const speed = 0.5;
     let maxScroll = 0;
     let paused = false;
 
