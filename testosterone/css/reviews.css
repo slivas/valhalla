@@ -1,14 +1,6 @@
 .section-reviews h2 {
     font-size: 31px;
-    margin-bottom: 14px;
-}
-
-.section-reviews_subtitle {
     margin-bottom: 24px;
-    font-family: 'Gotham', sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-    color: #6EAFD0;
 }
 
 .reviews__tabs-nav {
@@ -83,17 +75,10 @@
 }
 
 @media (min-width: 1024px) {
-    .section-reviews h2,
-    .section-reviews_subtitle {
-        text-align: center;
-    }
-
     .section-reviews h2 {
+        margin-bottom: 42px;
         font-size: 44px;
-    }
-
-    .section-reviews_subtitle {
-        font-size: 32px;
+        text-align: center;
     }
 
     .reviews__tabs {
@@ -142,12 +127,7 @@
 
 @media (min-width: 1280px) {
     .section-reviews h2 {
-        margin-bottom: 12px;
         font-size: 52px;
-    }
-
-    .section-reviews_subtitle {
-        margin-bottom: 64px;
     }
 
     .reviews__tabs {
@@ -180,6 +160,3 @@
         font-size: 18px;
     }
 }
-
-
-
