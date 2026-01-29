@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .banner__wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 18px 74px;
+            border-radius: 30px;
+            background-color: #F7F5F1;
+        }
+
+        .banner__title {
+            max-width: 460px;
+            margin-top: 0;
+            margin-bottom: 4px;
+            color: #000;
+            font-family: 'Gotham', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .banner__description {
+            max-width: 320px;
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #848580;
+            font-family: 'Gotham', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 130%;
+            text-transform: capitalize;
+        }
+
+        .banner__img {
+            width: 230px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 24px;
+        }
+
+        .banner__img img {
+            max-width: 100%;
+        }
+
+        .banner__btn {
+            display: inline-block;
+            padding: 12px 40px;
+            border-radius: 30px;
+            background-color: #F9A351;
+            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15);
+            font-size: 18px;
+            line-height: 140%;
+            text-decoration: none;
+            text-align: center;
+            transition-duration: .25s;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .banner__btn {
+                position: absolute;
+                left: 18px;
+                right: 18px;
+                bottom: 24px;
+            }
+        }
+
+        .banner__btn:hover {
+            background-color: #000;
+        }
+
+        @media (min-width: 768px) {
+            .banner__wrapper {
+                padding-bottom: 24px;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .banner__title {
+                margin-bottom: 12px;
+                font-size: 52px;
+            }
+
+            .banner__description {
+                margin-bottom: 42px;
+            }
+
+            .banner__img {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .banner__wrapper {
+                padding-top: 32px;
+                padding-left: 115px;
+                padding-bottom: 34px;
+            }
+        }
+    </style>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__wrapper">
+                <div class="banner__content">
+                    <p class="banner__title">Restore Hormonal Balance With Enclomiphene</p>
+                    <p class="banner__description">A personalized approach to long-term vitality</p>
+                    <a href="/product/enclomiphene-therapy/" class="banner__btn">Go To The Shop</a>
+                </div>
+                <div class="banner__img">
+                    <img src="enclomiphene-therapy.webp" alt="Enclomiphene Therapy">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
