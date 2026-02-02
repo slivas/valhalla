@@ -1,0 +1,11 @@
+.page-notification {
+    margin-top: 32px;
+}
+
+.page-notification p {
+    text-align: center;
+    max-width: 1010px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 12px;
+}
