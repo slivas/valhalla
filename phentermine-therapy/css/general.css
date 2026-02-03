@@ -190,8 +190,14 @@ h3 {
     border: 1px solid rgba(93, 150, 179, 0.20);
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 140%;
+}
+
+@media (min-width: 768px) {
+    .badge {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1024px) {
