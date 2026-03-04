@@ -684,3 +684,358 @@
         height: 600px;
     }
 }
+
+/*Valentine's Day*/
+
+.valentine .hero__inner {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid #D6CCB8;
+    background-image: url("../img/hero/valentine-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.valentine .hero__inner::before,
+.valentine .hero__inner::after {
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.valentine .hero__inner::before {
+    top: -32px;
+    left: 7px;
+    width: 36px;
+    height: 140px;
+    background-image: url("../img/hero/valentine-decor-left-mobile.webp");
+}
+
+.valentine .hero__inner::after {
+    top: -4px;
+    right: 7px;
+    width: 51px;
+    height: 103px;
+    background-image: url("../img/hero/valentine-decor-right-mobile.webp");
+}
+
+.valentine .hero__text h1 {
+    max-width: 240px;
+    color: rgba(194, 0, 0, 0.70);
+    text-align: center;
+    font-size: 34px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #C20000;
+}
+
+.valentine .hero__additional-info {
+    display: grid;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #95D8F9;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 12px 0 #6EAFD0;
+    text-align: center;
+}
+
+.valentine .hero__additional-info strong {
+    color: #C20000;
+    font-family: 'Gotham', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.valentine .hero__additional-info span {
+    max-width: 210px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #6EAFD0;
+    font-size: 16px;
+}
+
+.valentine .hero__description {
+    display: grid;
+    grid-row-gap: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.valentine .hero__description strong {
+    font-size: 16px;
+}
+
+.valentine .hero__code,
+.spring .hero__code {
+    background-color: rgba(247, 245, 241, 0.10);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    color: #221F1F;
+}
+
+.valentine .hero__btn-wrapper {
+    margin-bottom: 16px;
+}
+
+.valentine .hero__annotation {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .valentine .hero__inner {
+        background-image: url("../img/hero/valentine-bg-desktop.webp");
+    }
+
+    .valentine .hero__inner::before {
+        top: -50px;
+        left: 50px;
+        width: 60px;
+        height: 240px;
+    }
+
+    .valentine .hero__inner::after {
+        top: -6px;
+        right: 36px;
+        width: 80px;
+        height: 154px;
+    }
+
+    .valentine .hero__text h1 {
+        font-size: 50px;
+    }
+
+    .valentine .hero__additional-info strong {
+        font-size: 30px;
+    }
+
+    .valentine .hero__additional-info span {
+        max-width: none;
+    }
+
+    .valentine .hero__description,
+    .valentine .hero__description strong {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .valentine .hero__inner::before {
+        top: -85px;
+        left: 20px;
+        width: 410px;
+        height: 240px;
+        background-image: url("../img/hero/valentine-decor-desktop.webp");
+    }
+
+    .valentine .hero__inner::after {
+        display: none;
+    }
+
+    .valentine .hero__text h1 {
+        margin-bottom: 18px;
+        max-width: 444px;
+        font-size: 58px;
+        text-align: left;
+    }
+
+    .valentine .hero__additional-info {
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .valentine .hero__additional-info span {
+        margin: 0;
+    }
+
+    .valentine .hero__description {
+        text-align: left;
+    }
+
+    .valentine .hero__annotation {
+        padding-right: 18px;
+        text-align: right;
+    }
+}
+
+@media (min-width: 1280px) {
+    .valentine .hero__text h1 {
+        font-size: 68px;
+    }
+
+    .valentine .hero__inner::before {
+        top: -140px;
+        width: 640px;
+        height: 392px;
+    }
+
+    .valentine .hero__additional-info strong {
+        font-size: 36px;
+    }
+
+    .valentine .hero__additional-info span {
+        font-size: 24px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .valentine .hero__inner {
+        padding-left: 118px;
+    }
+
+    .valentine .hero__text {
+        padding-top: 52px;
+    }
+
+    .valentine .hero__inner::before {
+        top: -162px;
+        width: 788px;
+        height: 444px;
+    }
+}
+
+/*Spring*/
+
+.spring .hero__inner {
+    border-radius: 24px;
+    border: 1px solid #D6CCB8;
+    background: url("../img/hero/spring-mobile.webp") no-repeat center top / contain, linear-gradient(0deg, #E2EEDD 0%, #F7F5F1 100%) no-repeat left / contain;
+}
+
+.spring .hero__inner h1 {
+    max-width: 240px;
+    margin: 0 auto 12px;
+    color: #7B9E87;
+    text-transform: uppercase;
+    font-size: 34px;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #5D8169;
+}
+
+.spring .hero__additional-info {
+    display: grid;
+    margin-bottom: 12px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #95D8F9;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 12px 0 #6EAFD0;
+    text-align: center;
+}
+
+.spring .hero__additional-info strong {
+    color: #7B9E87;
+    text-transform: capitalize;
+    font-family: "Gotham", sans-serif;
+    font-size: 24px;
+}
+
+.spring .hero__additional-info span {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 210px;
+    color: #6EAFD0;
+}
+
+.spring .hero__btn-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spring .hero__description {
+    font-size: 14px;
+}
+
+.spring .hero__code-action {
+    max-width: 265px;
+    margin: 16px auto 0;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .spring .hero__text h1 {
+        font-size: 50px;
+    }
+
+    .spring .hero__additional-info strong {
+        font-size: 30px;
+    }
+
+    .spring .hero__additional-info span {
+        max-width: none;
+    }
+
+    .spring .hero__description,
+    .spring .hero__description strong {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .spring .hero__inner {
+        background: url("../img/hero/spring-desktop.webp") no-repeat left center / contain, linear-gradient(270deg, #E2EEDD 0%, #F7F5F1 100%) no-repeat left / contain;
+    }
+
+    .spring .hero__text h1 {
+        margin: 0 0 18px;
+        max-width: 444px;
+        font-size: 58px;
+        text-align: left;
+    }
+
+    .spring .hero__code-action {
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .spring .hero__additional-info {
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .spring .hero__additional-info span {
+        margin: 0;
+    }
+
+    .spring .hero__description {
+        text-align: left;
+    }
+
+    .spring .hero__annotation {
+        padding-right: 18px;
+        text-align: right;
+    }
+}
+
+@media (min-width: 1280px) {
+    .spring .hero__text h1 {
+        font-size: 68px;
+    }
+
+    .spring .hero__additional-info strong {
+        font-size: 36px;
+    }
+
+    .spring .hero__additional-info span {
+        font-size: 24px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .spring .hero__inner {
+        padding-left: 118px;
+    }
+
+    .spring .hero__text {
+        padding-top: 52px;
+    }
+}

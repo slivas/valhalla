@@ -57,6 +57,11 @@
     padding-bottom: 12px;
 }
 
+.hero_img-carousel .custom-slider__image .rounded {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
 .hero_img-carousel .custom-slider__image img {
     width: 100%;
     height: auto;

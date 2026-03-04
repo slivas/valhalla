@@ -5,7 +5,8 @@
 }
 
 @font-face {
-    font-family: 'Gotham-normal';
+    font-family: 'Gotham';
+    font-weight: 400;
     src: url('../fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
     src: url('../fonts/Gotham-Book.eot') format('embedded-opentype'),
     url('../fonts/Gotham-Book.woff2') format('woff2'),
@@ -13,7 +14,8 @@
     url('../fonts/Gotham-Book.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Gotham-bold';
+    font-family: 'Gotham';
+    font-weight: 700;
     src: url('../fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
     src: url('../fonts/Gotham-Bold.eot') format('embedded-opentype'),
     url('../fonts/Gotham-Bold.woff2') format('woff2'),

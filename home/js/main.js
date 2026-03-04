@@ -183,8 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cycleActiveClass('.cta-blueprint__list-item', 1000);
 
-
-
     // Auto switcher
     function initAutoSwitcher(selector, interval = 2000) {
         const container = document.querySelector(selector);
@@ -231,6 +229,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initAutoSwitcher('.how-it-works__advantages-list', 2000);
     initAutoSwitcher('.progress__list', 2000);
+
+    //Hero code copy
+    document.addEventListener('click', function (e) {
+        const btn = e.target.closest('.hero__code');
+        if (!btn) return;
+
+        const strong = btn.querySelector('strong');
+        if (!strong) return;
+
+        const text = strong.innerText.trim();
+
+        navigator.clipboard.writeText(text).then(() => {
+
+            const toast = document.createElement('div');
+            toast.innerText = 'Copied!';
+            toast.style.position = 'absolute';
+            toast.style.background = 'rgba(0,0,0,0.85)';
+            toast.style.color = '#fff';
+            toast.style.padding = '6px 10px';
+            toast.style.fontSize = '12px';
+            toast.style.borderRadius = '4px';
+            toast.style.whiteSpace = 'nowrap';
+            toast.style.zIndex = '9999';
+            toast.style.opacity = '0';
+            toast.style.transition = 'opacity 0.3s';
+
+            document.body.appendChild(toast);
+
+            const btnRect = btn.getBoundingClientRect();
+            const toastRect = toast.getBoundingClientRect();
+
+            toast.style.top = (btnRect.top + window.scrollY - toastRect.height - 6) + 'px';
+            toast.style.left = (btnRect.left + window.scrollX + (btnRect.width / 2) - (toastRect.width / 2)) + 'px';
+
+            requestAnimationFrame(() => {
+                toast.style.opacity = '1';
+            });
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+
+        });
+    });
 
 });
 

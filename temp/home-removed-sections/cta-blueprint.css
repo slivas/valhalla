@@ -1,7 +1,7 @@
 .section__cta-blueprint {
     margin-top: 120px;
     padding-bottom: 22px;
-    background-image: url("../img/cta-blueprint/bg-mobile.webp");
+    background-image: url("../../home/img/cta-blueprint/bg-mobile.webp");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -130,7 +130,7 @@
 
 @media (min-width: 768px) {
     .section__cta-blueprint {
-        background-image: url("../img/cta-blueprint/bg.webp");
+        background-image: url("../../home/img/cta-blueprint/bg.webp");
     }
 
     .cta-blueprint__img {
