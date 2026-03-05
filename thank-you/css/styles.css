@@ -159,7 +159,7 @@
 }
 
 .news .info__annotation--list-title {
-    margin-top: 16px;
+    margin-top: 24px;
     margin-bottom: 8px;
     font-size: 18px;
 }
@@ -426,6 +426,10 @@
         display: flex;
         column-gap: 16px;
         justify-content: center;
+    }
+
+    .news .info__annotation ul.four-items {
+        flex-wrap: wrap;
     }
 
     .four-in-row .info__item {
