@@ -910,18 +910,18 @@
 .spring .hero__inner h1 {
     max-width: 240px;
     margin: 0 auto 12px;
-    color: #7B9E87;
     text-transform: uppercase;
     font-size: 34px;
     text-align: center;
+    color: #F3A4AA;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #5D8169;
+    -webkit-text-stroke-color: #F1788C;
 }
 
 .spring .hero__additional-info {
     display: grid;
     margin-bottom: 12px;
-    padding: 8px 14px;
+    padding: 8px 10px;
     border-radius: 4px;
     border: 1px solid #95D8F9;
     background-color: #F6F6F6;
@@ -930,7 +930,7 @@
 }
 
 .spring .hero__additional-info strong {
-    color: #7B9E87;
+    color: #F1788C;
     text-transform: capitalize;
     font-family: "Gotham", sans-serif;
     font-size: 24px;
@@ -940,8 +940,8 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    max-width: 210px;
     color: #6EAFD0;
+    font-size: 14px;
 }
 
 .spring .hero__btn-wrapper {
@@ -950,6 +950,7 @@
 }
 
 .spring .hero__description {
+    display: grid;
     font-size: 14px;
 }
 
@@ -986,7 +987,7 @@
     .spring .hero__text h1 {
         margin: 0 0 18px;
         max-width: 444px;
-        font-size: 58px;
+        font-size: 52px;
         text-align: left;
     }
 
@@ -994,6 +995,7 @@
         max-width: none;
         margin-right: 0;
         margin-left: 0;
+        text-align: center;
     }
 
     .spring .hero__additional-info {
