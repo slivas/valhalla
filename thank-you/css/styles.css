@@ -21,6 +21,13 @@
     text-transform: capitalize;
 }
 
+.points__description {
+    margin-top: -12px;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .points__subtitle span {
     font-size: 20px;
     color: #7B9E87;
@@ -212,6 +219,10 @@
     font-size: 24px;
 }
 
+.good-news .cta__item--title.cta__item--title-smaller {
+    font-size: 22px;
+}
+
 .news .cta__item--title {
     font-size: 20px;
 }
@@ -236,6 +247,15 @@
 
 .cta__item .btn {
     margin-top: 22px;
+}
+
+.cta__item .btn.btn-bigger {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cta__item .btn.small-margin {
+    margin-top: 16px;
 }
 
 .cta__item + .cta__annotation {
