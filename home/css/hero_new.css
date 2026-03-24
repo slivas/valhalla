@@ -448,7 +448,7 @@
 .hero__btn-wrapper {
     display: flex;
     justify-content: center;
-    column-gap: 24px;
+    column-gap: 12px;
 }
 
 .black-friday .hero__code,
@@ -479,6 +479,10 @@
 
     .hero__additional-info {
         margin-bottom: 42px;
+    }
+
+    .hero__btn-wrapper {
+        column-gap: 24px;
     }
 }
 
@@ -773,9 +777,16 @@
 
 .valentine .hero__code,
 .spring .hero__code {
-    background-color: rgba(247, 245, 241, 0.10);
+    column-gap: 6px;
+    background-color: rgba(247, 245, 241);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
     color: #221F1F;
+}
+
+.valentine .hero__code,
+.spring .hero__code:hover {
+    background-color: #c0d1a3;
+    color: #fff;
 }
 
 .valentine .hero__btn-wrapper {
@@ -904,18 +915,18 @@
 .spring .hero__inner {
     border-radius: 24px;
     border: 1px solid #D6CCB8;
-    background: url("../img/hero/spring-mobile.webp") no-repeat center top / contain, linear-gradient(0deg, #E2EEDD 0%, #F7F5F1 100%) no-repeat left / contain;
+    background: url("../img/hero/spring-mobile.webp") no-repeat center top / contain, linear-gradient(0deg, #E2EEDD 0%, #F7F5F1 100%), #F7F5F1 no-repeat left / contain;
 }
 
 .spring .hero__inner h1 {
-    max-width: 240px;
+    max-width: 270px;
     margin: 0 auto 12px;
     text-transform: uppercase;
     font-size: 34px;
     text-align: center;
-    color: #F3A4AA;
+    color: #7B9E87;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #F1788C;
+    -webkit-text-stroke-color: #5D8169;
 }
 
 .spring .hero__additional-info {
@@ -986,7 +997,7 @@
 
     .spring .hero__text h1 {
         margin: 0 0 18px;
-        max-width: 444px;
+        max-width: 580px;
         font-size: 52px;
         text-align: left;
     }
@@ -1000,6 +1011,7 @@
 
     .spring .hero__additional-info {
         margin-bottom: 32px;
+        padding: 8px 14px;
         text-align: left;
     }
 
@@ -1008,6 +1020,7 @@
     }
 
     .spring .hero__description {
+        max-width: 454px;
         text-align: left;
     }
 
@@ -1027,7 +1040,7 @@
     }
 
     .spring .hero__additional-info span {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 }
