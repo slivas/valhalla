@@ -221,6 +221,10 @@
         font-size: 18px;
     }
 
+    .how-it-works_title h2 {
+        margin-bottom: 24px;
+    }
+
     .sticky-wrapper {
         position: sticky;
         top: 230px;
@@ -230,7 +234,10 @@
         text-align: left;
     }
 
-    .how-it-works_list-item-title-wrap .btn {
-        font-size: 18px;
+    .how-it-works .btn {
+        padding-left: 60px;
+        padding-right: 60px;
+        font-size: 22px;
+        line-height: 1.75;
     }
 }

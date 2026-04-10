@@ -45,9 +45,11 @@ require_once get_stylesheet_directory() . '/inc/includes/enqueue/vip-rewards.php
 //======== Registration scripts =======
 require_once get_stylesheet_directory() . '/inc/includes/enqueue/registration-enqueue.php';
 
-
 //======== Testosterone scripts =======
 require_once get_stylesheet_directory() . '/inc/includes/enqueue/testosterone-enqueue.php';
+
+//======== Styles and scripts for Quiz Thank You =======
+require_once get_stylesheet_directory() . '/inc/includes/enqueue/thank-you.php';
 
 
 function enqueue_custom_checkout_script() {
@@ -92,15 +94,15 @@ function salient_child_enqueue_styles() {
 
 function my_enqueue_registration_style() {
     if (
-        is_page( array( 'registration', 'registration-wellness', 'medical-intake-form') ) ||
-        is_singular( 'product' )
+            is_page( array( 'registration', 'registration-wellness', 'medical-intake-form') ) ||
+            is_singular( 'product' )
     ) {
         wp_enqueue_style(
-            'registration-style',
-            get_stylesheet_directory_uri() . '/inc/assets/css/registration.css',
-            array(),
-            '1.0',
-            'all'
+                'registration-style',
+                get_stylesheet_directory_uri() . '/inc/assets/css/registration.css',
+                array(),
+                '1.0',
+                'all'
         );
     }
 }
@@ -242,31 +244,31 @@ add_action('wp_footer', function () {
 
 add_action(
 
-    'nav_menu_link_attributes',
+        'nav_menu_link_attributes',
 
-    function ($atts, $item) {
+        function ($atts, $item) {
 
-        // If a menu item has the 'acsb-custom-trigger' class, then we'll add
+            // If a menu item has the 'acsb-custom-trigger' class, then we'll add
 
-        // the data-acsb-custom-trigger attribute which is required to triger
+            // the data-acsb-custom-trigger attribute which is required to triger
 
-        // the widget.
+            // the widget.
 
-        // @link https://accessibe.com/support/customization/how-can-i-create-a-custom-button-that-opens-the-interface
+            // @link https://accessibe.com/support/customization/how-can-i-create-a-custom-button-that-opens-the-interface
 
-        if (in_array('acsb-custom-trigger', $item->classes ?? [], true)) {
+            if (in_array('acsb-custom-trigger', $item->classes ?? [], true)) {
 
-            $atts['data-acsb-custom-trigger'] = 'true';
+                $atts['data-acsb-custom-trigger'] = 'true';
 
-        }
+            }
 
-        return $atts;
+            return $atts;
 
-    },
+        },
 
-    10,
+        10,
 
-    2
+        2
 
 );
 
@@ -2250,9 +2252,9 @@ function restrict_admin_access_for_user($user_id) {
 
             $allowed_pages = [
 
-                'index.php', // Dashboard (optional, you can remove this)
+                    'index.php', // Dashboard (optional, you can remove this)
 
-                'admin.php?page=wc-admin&path=/analytics', // WooCommerce Analytics
+                    'admin.php?page=wc-admin&path=/analytics', // WooCommerce Analytics
 
             ];
 
@@ -2260,7 +2262,7 @@ function restrict_admin_access_for_user($user_id) {
 
             $allowed_plugins = [
 
-                'woocommerce/woocommerce.php', // WooCommerce plugin
+                    'woocommerce/woocommerce.php', // WooCommerce plugin
 
             ];
 
@@ -2384,9 +2386,9 @@ function display_provider_ratings($user) {
 
         $results = $wpdb->get_results(
 
-            $wpdb->prepare("SELECT * FROM provider_ratings WHERE provider_id = %d ORDER BY rating_dt DESC", $provider_id),
+                $wpdb->prepare("SELECT * FROM provider_ratings WHERE provider_id = %d ORDER BY rating_dt DESC", $provider_id),
 
-            ARRAY_A
+                ARRAY_A
 
         );
 
@@ -2518,13 +2520,13 @@ function exclude_category_or_404_on_specific_url($query) {
 
         $tax_query[] = [
 
-            'taxonomy' => 'product_cat',
+                'taxonomy' => 'product_cat',
 
-            'field'    => 'slug',
+                'field'    => 'slug',
 
-            'terms'    => $excluded_category,
+                'terms'    => $excluded_category,
 
-            'operator' => 'NOT IN',
+                'operator' => 'NOT IN',
 
         ];
 
@@ -2856,10 +2858,10 @@ function v_sync_order_to_spotdx($order_id) {
     $api_url   = "https://app.spotdx.com/api/v2/orders/";
 
     $sku_map = [
-        "522.10" => "valhalla_comprehensive_wellness_test",
-        "522.20" => "valhalla_hormone_test",
-        "522.21" => "valhalla_hormone_test",
-        "522.30" => "valhalla_female_wellness_test"
+            "522.10" => "valhalla_comprehensive_wellness_test",
+            "522.20" => "valhalla_hormone_test",
+            "522.21" => "valhalla_hormone_test",
+            "522.30" => "valhalla_female_wellness_test"
     ];
 
     $kits_to_order = [];
@@ -2883,30 +2885,30 @@ function v_sync_order_to_spotdx($order_id) {
     }
 
     $payload = [
-        "recipient" => [
-            "first_name" => $order->get_shipping_first_name() ?: $order->get_billing_first_name(),
-            "last_name"  => $order->get_shipping_last_name() ?: $order->get_billing_last_name(),
-            "address" => [
-                "street1" => $order->get_shipping_address_1(),
-                "street2" => $order->get_shipping_address_2(),
-                "city"    => $order->get_shipping_city(),
-                "state"   => $order->get_shipping_state(),
-                "zip"     => $order->get_shipping_postcode(),
+            "recipient" => [
+                    "first_name" => $order->get_shipping_first_name() ?: $order->get_billing_first_name(),
+                    "last_name"  => $order->get_shipping_last_name() ?: $order->get_billing_last_name(),
+                    "address" => [
+                            "street1" => $order->get_shipping_address_1(),
+                            "street2" => $order->get_shipping_address_2(),
+                            "city"    => $order->get_shipping_city(),
+                            "state"   => $order->get_shipping_state(),
+                            "zip"     => $order->get_shipping_postcode(),
+                    ],
+                    "email" => $order->get_billing_email(),
+                    "phone" => $order->get_billing_phone(),
             ],
-            "email" => $order->get_billing_email(),
-            "phone" => $order->get_billing_phone(),
-        ],
-        "kit_types" => $kits_to_order,
+            "kit_types" => $kits_to_order,
     ];
 
     $response = wp_remote_post($api_url, [
-        'method'    => 'POST',
-        'timeout'   => 45,
-        'headers'   => [
-            'Content-Type'  => 'application/json',
-            'Authorization' => 'Token ' . $api_token,
-        ],
-        'body'      => json_encode($payload),
+            'method'    => 'POST',
+            'timeout'   => 45,
+            'headers'   => [
+                    'Content-Type'  => 'application/json',
+                    'Authorization' => 'Token ' . $api_token,
+            ],
+            'body'      => json_encode($payload),
     ]);
 
     if (is_wp_error($response)) {
@@ -3079,22 +3081,22 @@ add_action('template_redirect', function () {
             $current_url = get_permalink();
 
             return preg_replace_callback(
-                '#<a([^>]+)href=["\']([^"\']*/registration)([^"\']*)["\']#i',
-                function ($matches) use ($current_url) {
-                    $before_href = $matches[1];
-                    $base = $matches[2];
-                    $after_href = $matches[3];
+                    '#<a([^>]+)href=["\']([^"\']*/registration)([^"\']*)["\']#i',
+                    function ($matches) use ($current_url) {
+                        $before_href = $matches[1];
+                        $base = $matches[2];
+                        $after_href = $matches[3];
 
-                    if (strpos($after_href, 'redirect_to=') !== false) {
-                        return $matches[0];
-                    }
+                        if (strpos($after_href, 'redirect_to=') !== false) {
+                            return $matches[0];
+                        }
 
-                    $delimiter = (strpos($after_href, '?') !== false || str_starts_with($after_href, '?')) ? '&' : '?';
-                    $new_href = $base . $after_href . $delimiter . 'redirect_to=' . urlencode($current_url);
+                        $delimiter = (strpos($after_href, '?') !== false || str_starts_with($after_href, '?')) ? '&' : '?';
+                        $new_href = $base . $after_href . $delimiter . 'redirect_to=' . urlencode($current_url);
 
-                    return "<a{$before_href}href=\"{$new_href}\"";
-                },
-                $html
+                        return "<a{$before_href}href=\"{$new_href}\"";
+                    },
+                    $html
             );
         });
     }
@@ -3118,8 +3120,8 @@ add_action('template_redirect', function () {
 
             if (!isset($_GET['redirected']) && strpos($current_url, $target_url) !== 0) {
                 $redirect_url = add_query_arg([
-                    'reg' => 'new',
-                    'redirected' => 1,
+                        'reg' => 'new',
+                        'redirected' => 1,
                 ], $target_url);
 
                 wp_redirect($redirect_url);
@@ -3185,16 +3187,16 @@ function vv_rename_woocommerce_custom_meta_fields($payload, $resource, $resource
 
     // Map normalized keys (no leading underscore) to human labels
     $map = [
-        'additional_wooccm0' => 'I acknowledge that I am paying for concierge medical services and that if I choose to use the default pharmacy the cost of medications is included in this price. All sales are final unless I am found to be medically ineligible to receive a therapy by my Valhalla Vitality provider',
-        'additional_wooccm1' => 'I understand that Valhalla Vitality will be sending my medication prescription to a licensed compounding pharmacy. The typical manufacturing and processing time for my medications will be at least 10 business days before shipping',
-        'additional_wooccm2' => 'Are you currently taking any medications similar to or the same as those included in any of the therapies you are ordering today?',
-        'additional_wooccm3' => 'Please enter what medication are you taking, and what your current dose is',
+            'additional_wooccm0' => 'I acknowledge that I am paying for concierge medical services and that if I choose to use the default pharmacy the cost of medications is included in this price. All sales are final unless I am found to be medically ineligible to receive a therapy by my Valhalla Vitality provider',
+            'additional_wooccm1' => 'I understand that Valhalla Vitality will be sending my medication prescription to a licensed compounding pharmacy. The typical manufacturing and processing time for my medications will be at least 10 business days before shipping',
+            'additional_wooccm2' => 'Are you currently taking any medications similar to or the same as those included in any of the therapies you are ordering today?',
+            'additional_wooccm3' => 'Please enter what medication are you taking, and what your current dose is',
         // TODO: add the label for 4 if you need it:
         // 'additional_wooccm4' => '<< ORIGINAL LABEL FOR 4 >>',
-        'additional_wooccm5' => 'Are you experiencing the benefits of treatment as expected at the current dose? (Please provide as much detail as possible)',
-        'additional_wooccm6' => 'Are you experiencing any side effects at the current dose? (If so please explain the side effects with detail)',
-        'consultation_type'  => 'Consultation Type',
-        'consultationtype'   => 'Consultation Type', // just in case a camelCase key appears
+            'additional_wooccm5' => 'Are you experiencing the benefits of treatment as expected at the current dose? (Please provide as much detail as possible)',
+            'additional_wooccm6' => 'Are you experiencing any side effects at the current dose? (If so please explain the side effects with detail)',
+            'consultation_type'  => 'Consultation Type',
+            'consultationtype'   => 'Consultation Type', // just in case a camelCase key appears
     ];
 
     // Rename keys in a meta_data array (order-level or line-item level)
@@ -3281,9 +3283,19 @@ require_once get_stylesheet_directory() . '/inc/order-received-cta-add.php';
 //======== end user's tier to Active Campaign  =======
 require_once get_stylesheet_directory() . '/inc/active-campaign-tier.php';
 
+//======== Show tier note in a discounted price  =======
+require_once get_stylesheet_directory() . '/inc/woocommerce-discounted-price.php';
+
+//======== HubSpot Form  =======
+//require_once get_stylesheet_directory() . '/inc/hubspot-form.php';
+
 //======== Roles update allow  =======
 //require_once get_stylesheet_directory() . '/inc/roles-update-allow.php';
 
 //======== Supplements discount for therapies =======
 //require_once get_stylesheet_directory() . '/inc/supplements-discount.php';
 
+
+
+//======== Coupon  =======
+require_once get_stylesheet_directory() . '/inc/coupon.php';

@@ -127,7 +127,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Gotham-bold', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #6EAFD0;
@@ -147,7 +147,7 @@ h2 span {
 }
 
 h2 {
-    font-family: 'Gotham-bold', sans-serif;
+    font-family: 'Gotham', sans-serif;
     font-size: 32px;
     font-weight: normal;
     color: #6EAFD0;

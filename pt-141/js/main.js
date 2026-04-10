@@ -88,6 +88,33 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('DOMContentLoaded', initNetworkSwiper);
     window.addEventListener('resize', initNetworkSwiper);
 
+    let infoSlider = null;
+    function initInfoSwiper() {
+        if (window.innerWidth < 1024) {
+            if (!infoSlider) {
+                infoSlider = new Swiper('.info-three-in-row__slider', {
+                    spaceBetween: 20,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                    },
+                });
+            }
+        } else {
+            if (infoSlider) {
+                infoSlider.destroy(true, true);
+                infoSlider = null;
+            }
+        }
+    }
+    window.addEventListener('DOMContentLoaded', initInfoSwiper);
+    window.addEventListener('resize', initInfoSwiper);
+
     //Accordion
     const accordion = document.querySelector('.accordion');
 
