@@ -170,10 +170,6 @@
         margin-right: auto;
         margin-left: auto;
     }
-
-    .hero__subtitle {
-        max-width: 360px;
-    }
 }
 
 @media (min-width: 1280px) {
