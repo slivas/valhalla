@@ -1,6 +1,6 @@
 .section-reviews h2 {
     font-size: 31px;
-    margin-bottom: 14px;
+    margin-bottom: 24px;
 }
 
 .section-reviews_subtitle {
@@ -68,10 +68,17 @@
 }
 
 .section-reviews .review-item__name {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
     color: rgba(34, 31, 31, 0.40);
     font-size: 20px;
     font-weight: 700;
     font-variant-numeric: lining-nums proportional-nums;
+}
+
+.section-reviews .review-item__name svg {
+    width: 88px;
 }
 
 .review-item__rating {
@@ -138,11 +145,15 @@
         backdrop-filter: blur(6px);
         text-align: center;
     }
+
+    .section-reviews .review-item__name svg {
+        width: 100px;
+    }
 }
 
 @media (min-width: 1280px) {
     .section-reviews h2 {
-        margin-bottom: 12px;
+        margin-bottom: 48px;
         font-size: 52px;
     }
 
@@ -178,6 +189,10 @@
         padding-left: 56px;
         padding-right: 56px;
         font-size: 18px;
+    }
+
+    .section-reviews .review-item__name svg {
+        width: 120px;
     }
 }
 
